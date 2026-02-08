@@ -10,7 +10,6 @@ import { XtreamIOCaseStudy } from '@/app/components/XtreamIOCaseStudy';
 import { MondayCaseStudy } from '@/app/components/MondayCaseStudy';
 import { BluevineCaseStudy } from '@/app/components/BluevineCaseStudy';
 import imgMacStudio from 'figma:asset/4decb3fa846a4088c678f19d989b02718036933a.png';
-import imgZenBookDuo from 'figma:asset/dd66d05e0dae586d4d5431f5436c0a8a33b30ab9.png';
 import imgIPhone15Pro from 'figma:asset/21d1360edf0132c07e6253991afe1a55ee6a2bf4.png';
 import imgIPadMini from 'figma:asset/8b112128be2070541f71d6d357666b3c210840ca.png';
 import imgMondayMacBook from 'figma:asset/0b015f0f176342d0f8f762e05031909f478fb58f.png';
@@ -166,7 +165,7 @@ export function App() {
         <main className="flex-1 flex flex-col items-center justify-center px-4 md:px-6 text-center relative">
         <div className="flex flex-col items-center">
           <motion.p 
-            className="max-w-4xl mb-[30px] text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed font-thin px-4"
+            className="max-w-4xl mb-[30px] text-[17px] md:text-[19px] lg:text-[22px] leading-relaxed font-thin px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3, ease: 'easeOut' }}
@@ -245,7 +244,7 @@ export function App() {
         title="FUNDGUARD"
         description="Turning Operational Complexity into Clear, Actionable Systems. Designing scalable workflows for investment operations teams"
         imageSrc={imgMacStudio}
-        backgroundColor="#ffffff"
+        backgroundColor="var(--bg-primary)"
         imagePosition="right"
         onClick={() => setCurrentPage('fundguard')}
       />
@@ -255,18 +254,19 @@ export function App() {
         title="Monday.com"
         description="monday.com is a work management platform that helps teams plan, track, and collaborate efficiently together daily."
         imageSrc={imgMondayMacBook}
-        backgroundColor="#f5f5f5"
+        backgroundColor="var(--bg-secondary)"
         imagePosition="left"
         onClick={() => setCurrentPage('monday')}
       />
 
-      {/* Project 3: Behalf */}
+      {/* Project 3: Bit App */}
       <ProjectCard
-        title="Behalf"
-        description="Behalf helps e-commerce users spread payments digitally, improving affordability, flexibility, and overall purchasing experience."
-        imageSrc={imgZenBookDuo}
-        backgroundColor="#ffffff"
+        title="bit - app"
+        description="Israel's leading P2P payments app - designing a lean, data-driven money transfer experience for millions of users."
+        imageSrc={imgIPhone15Pro}
+        backgroundColor="var(--bg-primary)"
         imagePosition="right"
+        onClick={() => setCurrentPage('bit')}
       />
 
       {/* Project 4: Bluevine */}
@@ -274,27 +274,17 @@ export function App() {
         title="Bluevine"
         description="Bluevine is a mobile banking app designed to help small businesses manage their finances quickly and confidently."
         imageSrc={imgBluevinePhones}
-        backgroundColor="#f5f5f5"
+        backgroundColor="var(--bg-secondary)"
         imagePosition="left"
         onClick={() => setCurrentPage('bluevine')}
       />
 
-      {/* Project 5: Bit App */}
-      <ProjectCard
-        title="bit - app"
-        description="Israel's leading P2P payments app - designing a lean, data-driven money transfer experience for millions of users."
-        imageSrc={imgIPhone15Pro}
-        backgroundColor="#ffffff"
-        imagePosition="right"
-        onClick={() => setCurrentPage('bit')}
-      />
-
-      {/* Project 6: XtreamIO */}
+      {/* Project 5: XtreamIO */}
       <ProjectCard
         title="Xtream IO"
         description="Xtream IO is an all-flash storage platform delivering high performance, scalability, and simplified data management enterprise."
         imageSrc={imgIPadMini}
-        backgroundColor="#f5f5f5"
+        backgroundColor="var(--bg-primary)"
         imagePosition="right"
         onClick={() => setCurrentPage('xtreamio')}
       />

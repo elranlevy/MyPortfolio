@@ -36,13 +36,13 @@ export function ProjectCard({
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <div className="flex items-center justify-start p-2">
-            <p className="font-['Instrument_Sans:Bold',sans-serif] font-bold text-[#4f799a] text-sm md:text-[16px] tracking-[1.6px] uppercase">
+            <p className="font-bold text-accent text-sm md:text-[16px] tracking-[1.6px] uppercase">
               {title}
             </p>
           </div>
 
           <div className="flex items-center justify-center p-2">
-            <p className="font-['Poppins:ExtraLight',sans-serif] text-[#182730] leading-tight tracking-[-0.72px]" style={{ fontSize: '28px' }}>
+            <p className="font-extralight text-text-primary text-[28px] leading-tight tracking-[-0.72px]">
               {description}
             </p>
           </div>
@@ -50,9 +50,9 @@ export function ProjectCard({
           <div className="flex flex-col items-start p-2 w-full max-w-[217px]">
             <button
               onClick={onClick}
-              className="bg-[#0023a3] hover:bg-[#001a80] transition-colors w-full h-[57px] flex items-center justify-center px-8 py-6 rounded-lg"
+              className="bg-brand hover:bg-brand-hover transition-colors w-full h-[57px] flex items-center justify-center px-8 py-6 rounded-lg"
             >
-              <p className="font-['Poppins:Regular',sans-serif] text-white text-[16px]">
+              <p className="text-white text-[16px]">
                 Read case study
               </p>
             </button>

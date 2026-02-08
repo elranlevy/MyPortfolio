@@ -1,82 +1,123 @@
+/* ============================================================
+   Design System — Elran Portfolio
+   Single source of truth for all design tokens.
+   ============================================================ */
+
 :root {
+  /* --- Typography --- */
+  --font-family: 'Poppins', sans-serif;
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --border: rgba(0, 0, 0, 0.1);
-  --ring: oklch(0.708 0 0);
-  --font-weight-medium: 500;
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
   --font-weight-normal: 400;
-  --radius: 0.625rem;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* --- Brand Colors --- */
+  --brand: #0023a3;
+  --brand-hover: #001a80;
+  --accent: #4f799a;
+  --gradient-blue: #a8c5ff;
+
+  /* --- Text Colors --- */
+  --text-primary: #182730;
+  --text-inverse: #ffffff;
+
+  /* --- Background Colors --- */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-dark: #000000;
+
+  /* --- Border Colors --- */
+  --border-light: var(--bg-secondary);
+  --border-medium: #d1d5db; /* gray-300 */
+
+  /* --- Semantic (Tailwind bridge) --- */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --border: rgba(0, 0, 0, 0.1);
+  --ring: var(--brand);
+
+  /* --- Radii --- */
+  --radius: 0.5rem; /* rounded-lg = 8px */
+
+  /* --- Component: Button --- */
+  --button-height: 57px;
+  --button-radius: var(--radius);
 }
 
+/* --- Tailwind v4 theme bridge ---
+   Maps `:root` custom properties → Tailwind utility classes.
+   IMPORTANT: token names here (--color-brand, --color-accent, etc.)
+   must NOT collide with `:root` property names to avoid circular refs.
+*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-accent: var(--accent);
+  --color-text-primary: var(--text-primary);
+  --color-bg-secondary: var(--bg-secondary);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
 }
 
+/* --- Base layer --- */
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
   }
 
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
-
   html {
     font-size: var(--font-size);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family);
   }
 
   h1 {
-    font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   h2 {
-    font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   h3 {
-    font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   h4 {
-    font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   label {
-    font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   button {
-    font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
-  input {
-    font-size: var(--text-base);
+  input, textarea {
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
@@ -93,5 +134,10 @@
       transform: scale(1);
       opacity: 1;
     }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 }

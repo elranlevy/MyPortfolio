@@ -125,16 +125,16 @@ export function AboutPage({ onNavigateHome, onNavigateContact }: AboutPageProps)
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
         >
-          <h1 className="text-[36px] md:text-4xl lg:text-5xl xl:text-6xl text-[#182730] leading-tight" style={{ fontFamily: "'Poppins:ExtraLight',sans-serif", letterSpacing: '-0.72px' }}>
+          <h1 className="text-[36px] md:text-4xl lg:text-5xl xl:text-6xl text-text-primary font-extralight leading-tight tracking-[-0.72px]">
             12+ Years. Zero Fluff.
           </h1>
           
-          <p className="text-[#182730] leading-relaxed text-[18px] md:text-[24px]" style={{ fontFamily: "'Poppins:ExtraLight',sans-serif", letterSpacing: '-0.72px' }}>
+          <p className="text-text-primary font-extralight leading-relaxed text-[18px] md:text-[24px] tracking-[-0.72px]">
             Hi, I'm Elran, a Senior Product Designer. I specialize in simplifying complex domains without dumbing them down. Leveraging AI to accelerate my workflow, I prioritize real user behavior over assumptions and lean systems over decoration. I design for clarity, impact, and ROI - in that order.
           </p>
           
           <div className="mt-2 md:mt-4">
-            <button className="bg-[#0023a3] text-white px-8 py-3 md:px-10 md:py-4 rounded-lg text-sm md:text-base hover:opacity-90 transition-opacity">
+            <button className="bg-brand text-white px-8 py-3 md:px-10 md:py-4 rounded-lg text-sm md:text-base hover:opacity-90 transition-opacity">
               Contact me
             </button>
           </div>
