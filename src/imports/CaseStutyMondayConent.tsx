@@ -402,7 +402,6 @@ export default function CaseStutyMondayConent() {
       {/* ── 9. Visual Guidance ──────────────────────────── */}
       <section
         className="w-full py-[var(--section-py)] md:py-[var(--section-py-md)] lg:py-[var(--section-py-lg)] bg-surface-secondary"
-        style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 600px' }}
       >
         {/* Title at standard width */}
         <div className="max-w-[var(--content-max-w)] mx-auto px-[var(--content-px)] md:px-[var(--content-px-md)] lg:px-[var(--content-px-lg)]">

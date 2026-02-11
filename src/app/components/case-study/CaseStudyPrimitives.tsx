@@ -131,7 +131,6 @@ export function Section({
   return (
     <section
       className={`w-full py-[var(--section-py)] md:py-[var(--section-py-md)] lg:py-[var(--section-py-lg)] ${bg} ${className}`}
-      style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 600px' }}
     >
       <div className="max-w-[var(--content-max-w)] mx-auto px-[var(--content-px)] md:px-[var(--content-px-md)] lg:px-[var(--content-px-lg)]">
         {children}
@@ -330,7 +329,7 @@ export function CaseStudyImage({
       alt={alt}
       loading="lazy"
       decoding="async"
-      className={`w-full h-auto object-cover content-visibility-auto ${className}`}
+      className={`w-full h-auto object-cover ${className}`}
     />
   );
 }

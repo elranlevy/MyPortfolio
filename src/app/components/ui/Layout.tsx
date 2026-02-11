@@ -97,7 +97,6 @@ export function Stack({
 
    Supports:
    - bg variants via className or bg prop
-   - contentVisibility for rendering perf
    - responsive padding (small → tablet → desktop)
    ────────────────────────────────────────────────────────────── */
 export function Section({
@@ -116,7 +115,7 @@ export function Section({
   return (
     <section
       className={`w-full ${noPadding ? '' : 'py-[var(--section-py)] md:py-[var(--section-py-md)] lg:py-[var(--section-py-lg)]'} ${bg} ${className}`}
-      style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 600px', ...style }}
+      style={style}
     >
       <div className="max-w-5xl mx-auto px-[var(--content-px)] md:px-[var(--content-px-md)] lg:px-[var(--content-px-lg)]">
         {children}
