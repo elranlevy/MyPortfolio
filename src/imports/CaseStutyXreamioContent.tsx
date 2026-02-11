@@ -1,394 +1,596 @@
-import imgScreenshot20260201At1548372 from 'figma:asset/fb3912313a3db48cca0deeaabe76da38bd229246.png';
-import imgScreenshot20260201At1548421 from 'figma:asset/9b127abdf1ca80ed7736b79843dd72681dbe0ecb.png';
-import imgScreenshot20260201At1548491 from 'figma:asset/34ccd3f99a378bbd2b72352640f025671246b093.png';
+import { type ReactNode } from 'react';
+import { motion } from 'motion/react';
+import {
+  ArrowRight,
+  Server,
+  BarChart3,
+  Gauge,
+  LayoutDashboard,
+  Eye,
+  Workflow,
+  Layers,
+  Bell,
+  Zap,
+  Grid3X3,
+  TrendingUp,
+} from 'lucide-react';
 
-import imgImage172 from 'figma:asset/d39fb3cca29d3b2153e74727f2bd2167584b2b3c.png';
-import imgXtremIo1 from 'figma:asset/5e9fd7b34040b77efd1c255227d85dbe85ae94c9.png';
+/* ── Existing images ─────────────────────────────────────────── */
 import imgImage175 from 'figma:asset/8283c758f682797739df887f6aa3e29caa08732e.png';
-
-import imgBitmap from 'figma:asset/180cc76a8505e3e53aa3b8fd86799e8eecaafaaa.png';
-import imgBitmap1 from 'figma:asset/f08631ad34a4d9a9dd963f04e17f3a6e1d2d3cfd.png';
+import imgImage172 from 'figma:asset/d39fb3cca29d3b2153e74727f2bd2167584b2b3c.png';
 import imgImage174 from 'figma:asset/dc4843ec408a4532c53cdacb5ed2533eecd0dc2e.png';
 import imgImage176 from 'figma:asset/d4d58b02892ddfba3736780450879b582c47390e.png';
-import imgImage177 from 'figma:asset/84697da8fef42b33bbdcddc2442ef98a82019325.png';
-import imgImage178 from 'figma:asset/d7831a442bc44faf1090c9e711599d69abfabc41.png';
 import imgClusterStatus from 'figma:asset/1310cf6034e7996a8a437beaf595a9e75ee70205.png';
+import imgImage178 from 'figma:asset/d7831a442bc44faf1090c9e711599d69abfabc41.png';
+import imgImage177 from 'figma:asset/84697da8fef42b33bbdcddc2442ef98a82019325.png';
 
-import {
-  Section,
-  SectionTitle,
-  InfoBoxGrid,
-  InsightBlock,
-  CaseStudyImage,
-  ImageWithQuote,
-  CaseStudyHero,
-  CaseStudyBody,
-  SkillCardGrid,
-} from '@/app/components/case-study/CaseStudyPrimitives';
-
-/* ── XtreamIO Logo (image-based) ────────────────────────── */
-function XtreamioLogo() {
-  return <img src={imgXtremIo1} alt="XtreamIO" className="w-full h-auto object-contain" />;
-}
-
-/* ── Persona stage card (unique to XtreamIO) ────────────── */
-function StageCard({
-  stage,
-  emotional,
-  image,
-  description,
-  mentalState,
+/* ── Scroll-triggered animation ──────────────────────────────── */
+function Reveal({
+  children,
+  className = '',
+  delay = 0,
 }: {
-  stage: string;
-  emotional: string;
-  image: string;
-  description: string;
-  mentalState: string;
+  children: ReactNode;
+  className?: string;
+  delay?: number;
 }) {
   return (
-    <div className="bg-surface-secondary flex flex-col items-center gap-[var(--space-6)] md:gap-[var(--space-8)] p-[var(--card-px)] md:p-[var(--card-px-md)] overflow-hidden">
-      <div className="flex flex-col items-center gap-[var(--space-3)] md:gap-[var(--space-4)]">
-        <p className="type-label">
-          {stage}
-        </p>
-        <p className="type-h2 text-text-primary text-center">{emotional}</p>
-        <div className="w-[var(--avatar-size)] h-[var(--avatar-size)] md:w-[var(--avatar-size-md)] md:h-[var(--avatar-size-md)] rounded-[var(--avatar-radius)] overflow-hidden">
-          <img src={image} alt={stage} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-        </div>
-      </div>
-      <p className="type-body text-center max-w-[752px]">
-        {description}
-      </p>
-      <p className="type-body-info text-text-primary text-center">
-        <span className="capitalize font-[var(--weight-medium)] tracking-[var(--tracking-wider)]">Mental state</span>
-        <span className="font-[var(--weight-light)]">: {mentalState}</span>
-      </p>
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.7, delay, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+/* ── Centered vertical line divider ──────────────────────────── */
+function VerticalDivider() {
+  return (
+    <div className="flex justify-center py-8 md:py-10">
+      <div className="w-px h-12 md:h-16" style={{ backgroundColor: 'var(--text-primary)' }} />
     </div>
   );
 }
 
-/* ============================================================
-   XTREAMIO CASE STUDY — Responsive Rewrite
-   ============================================================ */
+/* ── Bold centered section heading ───────────────────────────── */
+function SectionHeading({ children }: { children: ReactNode }) {
+  return (
+    <h2
+      className="text-2xl md:text-3xl lg:text-[34px] font-semibold text-center mb-10 md:mb-14"
+      style={{ color: 'var(--text-primary)' }}
+    >
+      {children}
+    </h2>
+  );
+}
+
+/* ── Icon row (3 icons in a line) ────────────────────────────── */
+function IconRow({
+  icons,
+}: {
+  icons: { icon: ReactNode; label?: string }[];
+}) {
+  return (
+    <div className="flex items-center justify-center gap-10 md:gap-16 mb-8 md:mb-10">
+      {icons.map((item, i) => (
+        <div key={i} className="flex flex-col items-center gap-2">
+          <div style={{ color: 'var(--text-primary)' }}>{item.icon}</div>
+          {item.label && (
+            <p className="text-[10px] uppercase tracking-wider text-center" style={{ color: 'var(--text-tertiary)' }}>
+              {item.label}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ── KPI / Impact callout card ───────────────────────────────── */
+function KpiCard({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="max-w-xl mx-auto">
+      <div
+        className="relative overflow-hidden rounded-2xl px-8 py-10 md:px-12 md:py-12 text-center"
+        style={{ backgroundColor: '#e8eeff' }}
+      >
+        {/* Decorative background icon */}
+        <div className="absolute -left-4 -top-4 opacity-[0.08]">
+          <TrendingUp className="w-32 h-32" strokeWidth={1.2} style={{ color: 'var(--brand)' }} />
+        </div>
+        <p
+          className="text-[11px] uppercase tracking-[0.25em] mb-4 relative"
+          style={{ color: 'var(--text-tertiary)' }}
+        >
+          {label}
+        </p>
+        <div className="relative">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+/* ================================================================
+   XTREAMIO CASE STUDY
+   ================================================================
+   Redesigned to match natalielabel.com editorial style:
+   - Vertical line dividers between sections
+   - Bold centered section headings
+   - Icon rows illustrating concepts
+   - KPI callout cards
+   - Dark accent bands for key moments
+   ================================================================ */
 export default function CaseStutyXreamioContent() {
   return (
-    <>
-      {/* ── 1. Hero ─────────────────────────────────────── */}
-      <CaseStudyHero
-        logo={<XtreamioLogo />}
-        title="Designing awareness in systems that never stop,"
-        subtitle="when losing context means losing control"
-        heroImage={imgImage175}
-        heroImageAlt="XtreamIO dashboard"
-        heroImageClassName="w-full max-w-3xl lg:max-w-4xl flex items-center [&>img]:max-h-[40vh]"
-      />
-
-      <CaseStudyBody>
-      {/* ── 2. The Challenge ────────────────────────────── */}
-      <Section>
-        <SectionTitle title="The Challenge">
-          <p>Operators needed to:</p>
-        </SectionTitle>
-
-        <InfoBoxGrid
-          items={[
-            'Understand connectivity instantly',
-            'Inspect details without losing the big picture',
-            'Monitor health, performance, and capacity together',
-          ]}
-        />
-
-        <p className="mt-[var(--space-8)] type-body">
-          Xtream operates in environments where:
-        </p>
-
-        <div className="mt-[var(--space-4)]">
-          <InfoBoxGrid
-            items={[
-              'Systems are deeply interconnected',
-              'Small changes cascade',
-              'Losing orientation is dangerous',
-            ]}
-          />
-        </div>
-
-        <div className="mt-[var(--space-8)]">
-          <InsightBlock label="" contentClassName="type-body-info">
-            <p>
-              The challenge was not showing data. It was keeping users grounded
-              inside complexity.
+    <div className="bg-white">
+      {/* ═══════════════════════════════════════════════════════
+          HERO / TITLE
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pt-24 md:pt-32 lg:pt-40 pb-6 md:pb-8 px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <Reveal>
+            <p
+              className="text-xs uppercase tracking-[0.3em] mb-6"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              XtremIO
             </p>
-          </InsightBlock>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.12] mb-6"
+              style={{ color: 'var(--text-primary)' }}
+            >
+              Designing enterprise storage management systems
+            </h1>
+          </Reveal>
+
+          <Reveal delay={0.15}>
+            <p
+              className="text-base md:text-lg font-light italic max-w-2xl mx-auto"
+              style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-secondary)' }}
+            >
+              When losing context means losing control
+            </p>
+          </Reveal>
+
+          {/* Metadata bar */}
+          <Reveal delay={0.25}>
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-10 pt-8 text-left"
+              style={{ borderTop: '1px solid var(--border-subtle)' }}
+            >
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.15em] mb-2" style={{ color: 'var(--text-tertiary)' }}>
+                  Role
+                </p>
+                <p className="text-sm font-light" style={{ color: 'var(--text-primary)' }}>
+                  Product Designer
+                </p>
+              </div>
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.15em] mb-2" style={{ color: 'var(--text-tertiary)' }}>
+                  Team
+                </p>
+                <p className="text-sm font-light" style={{ color: 'var(--text-primary)' }}>
+                  PM · Engineering · Enterprise Stakeholders
+                </p>
+              </div>
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.15em] mb-2" style={{ color: 'var(--text-tertiary)' }}>
+                  Scope
+                </p>
+                <p className="text-sm font-light" style={{ color: 'var(--text-primary)' }}>
+                  Storage monitoring · System management · Admin workflows
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </Section>
+      </section>
 
-      {/* ── 3. User Persona ─────────────────────────────── */}
-      <Section>
-        <SectionTitle title="Get to Know the User — Backup Bob">
-          <p>
-            To design an effective backup and recovery experience, I focused on
-            understanding Bob&rsquo;s mental state across different operational
-            moments. Bob is a Backup Administrator responsible for keeping
-            virtual machines protected, monitored, and recoverable under
-            pressure. His emotional state shifts significantly depending on
-            system stability and urgency.
-          </p>
-        </SectionTitle>
-
-        <div className="flex flex-col gap-[var(--space-6)] md:gap-[var(--space-8)]">
-          <StageCard
-            stage="Maintenance Stage"
-            emotional="Calm & In Control"
-            image={imgScreenshot20260201At1548372}
-            description="During routine maintenance, Bob feels confident and relaxed. He has time to plan, manage virtual machines, and define recovery strategies without pressure. Decisions are thoughtful and proactive, allowing him to optimize future recovery scenarios."
-            mentalState="Low stress, high control, forward-thinking."
-          />
-          <StageCard
-            stage="Overview Stage"
-            emotional="Alert & Cautious"
-            image={imgScreenshot20260201At1548421}
-            description="In day-to-day monitoring, Bob's focus shifts to vigilance. Most of his time is spent ensuring systems are protected, identifying potential issues, and responding before they escalate. While not urgent, the responsibility keeps him mentally engaged and slightly tense."
-            mentalState="Moderate stress, high awareness, reactive readiness."
-          />
-          <StageCard
-            stage="Crisis Stage"
-            emotional="Urgent & Overloaded"
-            image={imgScreenshot20260201At1548491}
-            description="When a failure occurs, Bob's stress peaks. Time is critical, and mistakes are costly. He needs immediate clarity, fast actions, and absolute confidence that the recovery process will work as planned. Any friction or uncertainty directly increases pressure."
-            mentalState="High stress, urgency-driven, zero tolerance for friction."
+      {/* Hero image */}
+      <Reveal>
+        <div className="max-w-6xl mx-auto px-6 md:px-12 pb-4">
+          <img
+            src={imgImage175}
+            alt="XtremIO storage management dashboard"
+            className="w-full h-auto rounded-xl"
+            loading="eager"
+            decoding="async"
           />
         </div>
-      </Section>
+      </Reveal>
 
-      {/* ── 4. Ideation Insights ────────────────────────── */}
-      <Section>
-        <SectionTitle title="Ideation Insights">
-          <p>
-            After four days of intensive ideation, user interviews, and system
-            analysis, we synthesized our findings into six key insights. These
-            insights capture the core challenges, mental states, and unmet needs
-            of backup administrators across routine operations and high-pressure
-            moments. They became the foundation for our design decisions,
-            helping us focus on reducing cognitive load, increasing clarity, and
-            supporting fast, confident action when it matters most.
-          </p>
-        </SectionTitle>
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
 
-        <SkillCardGrid
-          cards={[
-            { label: 'First Insight', title: 'Clear Overview', description: '\u201CLet me see only what I need when I need it\u201D' },
-            { label: 'Second Insight', title: 'Automation', description: '\u201CAsk for only for the minimum, automate the rest\u201D' },
-            { label: 'Third Insight', title: 'System Recover', description: '\u201CWatch my back\u201D' },
-            { label: 'Fourth Insight', title: 'Clear & Simple Direction', description: '\u201CSpeak my language\u201D' },
-            { label: 'Fifth Insight', title: 'Guide & Control', description: '\u201CShow me the way, but let me decide\u201D' },
-            { label: 'Sixth Insight', title: 'Clear Overview', description: '\u201CBe optimistic\u201D' },
-          ]}
+      {/* ═══════════════════════════════════════════════════════
+          THE PROBLEM — with icons
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl mx-auto">
+          <Reveal>
+            <IconRow
+              icons={[
+                { icon: <Server className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.3} />, label: 'Infrastructure' },
+                { icon: <BarChart3 className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.3} />, label: 'Dense Data' },
+                { icon: <Gauge className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.3} />, label: 'Expert Users' },
+              ]}
+            />
+          </Reveal>
+
+          <Reveal>
+            <SectionHeading>The Problem</SectionHeading>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <h3
+              className="text-lg md:text-xl font-semibold text-center mb-6 max-w-2xl mx-auto leading-snug"
+              style={{ color: 'var(--text-primary)' }}
+            >
+              XtremIO operated in a highly technical enterprise environment
+            </h3>
+          </Reveal>
+
+          <Reveal delay={0.15}>
+            <p className="text-sm md:text-base font-light text-center mb-6 max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+              Challenges:
+            </p>
+
+            <div className="flex flex-col gap-3.5 max-w-lg mx-auto">
+              {[
+                'Complex infrastructure logic',
+                'Dense data and monitoring dashboards',
+                'Expert users with low tolerance for inefficiency',
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span
+                    className="w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0"
+                    style={{ backgroundColor: 'var(--text-tertiary)' }}
+                  />
+                  <p className="text-sm md:text-base font-light" style={{ color: 'var(--text-primary)' }}>
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <p
+              className="text-sm md:text-base font-light italic text-center mt-8 max-w-xl mx-auto"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              The interface needed to simplify without oversimplifying.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
+          MY OWNERSHIP
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl mx-auto">
+          <Reveal>
+            <IconRow
+              icons={[
+                { icon: <LayoutDashboard className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.3} />, label: 'Dashboards' },
+                { icon: <Eye className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.3} />, label: 'Visual Patterns' },
+                { icon: <Workflow className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.3} />, label: 'Admin Flows' },
+              ]}
+            />
+          </Reveal>
+
+          <Reveal>
+            <SectionHeading>My Ownership</SectionHeading>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="flex flex-col gap-4 max-w-xl mx-auto">
+              {[
+                'Designed monitoring dashboards and admin workflows',
+                'Translated infrastructure metrics into clear visual patterns',
+                'Reduced friction in system management tasks',
+                'Collaborated directly with engineering-heavy stakeholders',
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span
+                    className="w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0"
+                    style={{ backgroundColor: 'var(--text-tertiary)' }}
+                  />
+                  <p className="text-sm md:text-base font-light" style={{ color: 'var(--text-primary)' }}>
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
+          KEY INSIGHT — Dramatic full-width accent band
+          ═══════════════════════════════════════════════════════ */}
+      <section
+        className="py-24 md:py-36 px-6 md:px-12"
+        style={{ backgroundColor: 'var(--color-gray-900)' }}
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <Reveal>
+            <p className="text-[11px] uppercase tracking-[0.3em] mb-10" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              Key Insight
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white mb-3">
+              Technical users value clarity and control
+            </p>
+            <p
+              className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white italic"
+              style={{ fontFamily: 'var(--font-serif)' }}
+            >
+              &mdash; not decoration.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-10 text-sm md:text-base font-light max-w-lg mx-auto" style={{ color: 'rgba(255,255,255,0.55)' }}>
+              Efficiency and information hierarchy drive adoption.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
+          THE APPROACH — numbered cards with icons
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl mx-auto">
+          <Reveal>
+            <SectionHeading>The Approach</SectionHeading>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              {
+                num: '01',
+                text: 'Simplify data hierarchy in dashboards',
+                icon: <Layers className="w-7 h-7" strokeWidth={1.4} />,
+              },
+              {
+                num: '02',
+                text: 'Improve visibility of system status and alerts',
+                icon: <Bell className="w-7 h-7" strokeWidth={1.4} />,
+              },
+              {
+                num: '03',
+                text: 'Reduce steps in frequent admin actions',
+                icon: <Zap className="w-7 h-7" strokeWidth={1.4} />,
+              },
+              {
+                num: '04',
+                text: 'Standardize interaction logic across tools',
+                icon: <Grid3X3 className="w-7 h-7" strokeWidth={1.4} />,
+              },
+            ].map((step, i) => (
+              <Reveal key={i} delay={i * 0.08}>
+                <div
+                  className="p-6 md:p-8 rounded-xl h-full"
+                  style={{ backgroundColor: 'var(--surface-secondary)' }}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <p
+                      className="text-2xl md:text-3xl font-semibold"
+                      style={{ color: 'var(--text-tertiary)' }}
+                    >
+                      {step.num}
+                    </p>
+                    <div style={{ color: 'var(--text-tertiary)' }}>{step.icon}</div>
+                  </div>
+                  <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: 'var(--text-primary)' }}>
+                    {step.text}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
+          DESIGN VISUALS — Dashboard & System Views
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-8 md:pb-12 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <img
+              src={imgImage172}
+              alt="XtremIO dashboard overview"
+              className="w-full h-auto rounded-xl mb-5"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <Reveal delay={0.08}>
+              <img
+                src={imgImage174}
+                alt="Health monitoring tab"
+                className="w-full h-auto rounded-xl"
+                loading="lazy"
+                decoding="async"
+              />
+            </Reveal>
+            <Reveal delay={0.16}>
+              <img
+                src={imgImage176}
+                alt="Capacity monitoring tab"
+                className="w-full h-auto rounded-xl"
+                loading="lazy"
+                decoding="async"
+              />
+            </Reveal>
+          </div>
+          <Reveal className="mt-5">
+            <img
+              src={imgClusterStatus}
+              alt="Cluster connectivity status"
+              className="w-full h-auto rounded-xl"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+          <Reveal className="mt-5">
+            <img
+              src={imgImage178}
+              alt="Master-detail view"
+              className="w-full h-auto rounded-xl"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
+          RESULTS — Full-width dark accent band
+          ═══════════════════════════════════════════════════════ */}
+      <section
+        className="py-24 md:py-36 px-6 md:px-12 lg:px-16"
+        style={{ backgroundColor: 'var(--color-gray-900)' }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <Reveal>
+            <p className="text-[11px] uppercase tracking-[0.3em] mb-4" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              Results
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-16">
+              Measurable impact on enterprise operations
+            </h2>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-16 text-center">
+            <Reveal delay={0.08}>
+              <div>
+                <p
+                  className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-3"
+                  style={{ color: 'rgba(255,255,255,0.7)' }}
+                >
+                  &uarr;
+                </p>
+                <p className="text-sm font-light" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  Improved task efficiency for system administrators
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <div>
+                <p
+                  className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-3"
+                  style={{ color: 'rgba(255,255,255,0.7)' }}
+                >
+                  &darr;
+                </p>
+                <p className="text-sm font-light" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  Reduced friction in monitoring workflows
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <div className="sm:col-span-2">
+                <p
+                  className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-3"
+                  style={{ color: 'rgba(255,255,255,0.7)' }}
+                >
+                  &#x2713;
+                </p>
+                <p className="text-sm font-light" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  More consistent enterprise UI patterns
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          CLOSING IMAGE
+          ═══════════════════════════════════════════════════════ */}
+      <div className="relative w-full overflow-hidden">
+        <img
+          src={imgImage177}
+          alt="XtremIO — enterprise monitoring at scale"
+          loading="lazy"
+          decoding="async"
+          className="w-full h-auto object-cover"
         />
-      </Section>
-
-      {/* ── 5. Setup Flow ───────────────────────────────── */}
-      <Section>
-        <SectionTitle title="From a Complex Setup to a Clear, Guided Flow">
-          <p>
-            The legacy protection flow required users to move through multiple
-            disconnected steps, forcing them to make low-level technical
-            decisions early in the process. This created a long, error-prone
-            path with high cognitive load, especially for first-time or
-            time-constrained users.
-          </p>
-        </SectionTitle>
-
-        <CaseStudyImage src={imgBitmap} alt="Legacy protection flow" className="rounded-lg" />
-
-        <p className="mt-[var(--space-8)] type-body">
-          In the redesigned flow, the process is reduced to its core decisions.
-          Users start by selecting the virtual machines, choose an existing
-          policy, and complete the setup in a single, linear path. Advanced
-          configuration is available when needed, without blocking progress.
-        </p>
-
-        <div className="mt-[var(--space-6)]">
-          <CaseStudyImage src={imgBitmap1} alt="Redesigned protection flow" className="rounded-lg" />
-        </div>
-
-        <p className="mt-[var(--space-8)] type-body">
-          This shift transforms the experience from a configuration-heavy
-          wizard into a goal-oriented flow&mdash;reducing setup time,
-          minimizing mistakes, and helping backup administrators complete
-          protection tasks with confidence and speed.
-        </p>
-      </Section>
-
-      {/* ── 6. Large Dashboard Image ────────────────────── */}
-      <div className="w-full py-[var(--space-12)] md:py-[var(--space-16)] lg:py-[var(--space-24)] bg-surface-primary">
-        <div className="max-w-[var(--content-wide-max-w)] mx-auto px-[var(--content-px)] md:px-[var(--content-px-md)] lg:px-[var(--content-px-lg)]">
-          <CaseStudyImage src={imgImage172} alt="Dashboard overview" className="rounded-lg" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="ml-auto mr-4 md:mr-12 lg:mr-20 max-w-[40%] md:max-w-sm lg:max-w-md">
+            <p className="text-[10px] leading-3 md:text-base md:leading-7 mb-1 md:mb-2 text-white font-light tracking-wide">
+              &ldquo;Great monitoring UX doesn&rsquo;t simplify systems. It makes them:
+            </p>
+            <p className="text-xs leading-4 md:text-3xl md:leading-snug lg:text-[48px] lg:leading-snug text-white font-light tracking-wide">
+              understandable under pressure&rdquo;
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* ── 7. Dashboard Overview ───────────────────────── */}
-      <Section>
-        <SectionTitle title="Dashboard Overview with Mega Tabs (Health / Performance / Capacity)\u200A\u2014\u200AInformation at the Right Level">
-          <p>
-            The dashboard is organized around three high-level mega tabs:
-            Health, Performance, and Capacity. Each tab surfaces the most
-            critical information for that domain, allowing administrators to
-            quickly understand system status without digging through multiple
-            screens.
-          </p>
-        </SectionTitle>
+      {/* ─── DIVIDER ─────────────────────────────────────────── */}
+      <VerticalDivider />
 
-        <CaseStudyImage src={imgImage174} alt="Health mega tab" className="rounded-lg" />
-
-        <p className="mt-[var(--space-8)] type-body">
-          This structure reduces cognitive load by grouping related metrics into
-          a single, focused view. Instead of scanning scattered data points,
-          users can assess system health, performance trends, or capacity risks
-          at a glance and then drill down only when needed.
-        </p>
-
-        <div className="mt-[var(--space-6)]">
-          <CaseStudyImage src={imgImage175} alt="Performance mega tab" className="rounded-lg" />
+      {/* ═══════════════════════════════════════════════════════
+          NEXT CASE STUDY NAVIGATION
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-16">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <div className="text-left">
+            <p className="text-[11px] uppercase tracking-[0.15em] mb-1" style={{ color: 'var(--text-tertiary)' }}>
+              Previous Case Study
+            </p>
+            <p className="text-base md:text-lg font-medium flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
+              <ArrowRight className="w-4 h-4 rotate-180" />
+              Bluevine
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="text-[11px] uppercase tracking-[0.15em] mb-1" style={{ color: 'var(--text-tertiary)' }}>
+              Next Case Study
+            </p>
+            <p className="text-base md:text-lg font-medium flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
+              FundGuard
+              <ArrowRight className="w-4 h-4" />
+            </p>
+          </div>
         </div>
-
-        <p className="mt-[var(--space-8)] type-body">
-          By presenting high-level signals first and detailed insights second,
-          the mega tabs support fast decision-making during routine monitoring
-          and high-pressure situations alike&mdash;helping backup administrators
-          stay in control and act with confidence.
-        </p>
-
-        <div className="mt-[var(--space-6)]">
-          <CaseStudyImage src={imgImage176} alt="Capacity mega tab" className="rounded-lg" />
-        </div>
-      </Section>
-
-      {/* ── 8. Cluster Connectivity ─────────────────────── */}
-      <Section>
-        <SectionTitle title="Cluster Connectivity — Clear Status at a Glance">
-          <p>
-            The cluster connectivity component provides an immediate, visual
-            understanding of the relationship between the XMS and the cluster.
-            By using consistent icons, colors, and connection lines,
-            administrators can instantly identify the current state without
-            interpreting logs or alerts.
-          </p>
-        </SectionTitle>
-
-        <CaseStudyImage
-          src={imgClusterStatus}
-          alt="Cluster connectivity status diagram showing XMS-to-cluster relationship"
-        />
-
-        <div className="flex flex-col gap-[var(--space-4)] md:gap-[var(--space-6)] mt-[var(--space-8)]">
-          <InsightBlock
-            label="Connected"
-            labelClassName="type-h2 mb-[var(--space-2)]"
-            contentClassName="type-body"
-          >
-            <p>
-              Both systems are communicating normally. The solid connection line
-              and green indicators confirm that the cluster is healthy and fully
-              operational.
-            </p>
-          </InsightBlock>
-
-          <InsightBlock
-            label="Disconnected"
-            labelClassName="type-h2 font-[var(--weight-medium)] mb-[var(--space-2)]"
-            contentClassName="type-body"
-          >
-            <p>
-              Communication between the XMS and the cluster is interrupted. The
-              broken connection line and red indicator clearly signal an issue
-              that requires attention.
-            </p>
-          </InsightBlock>
-
-          <InsightBlock
-            label="Unknown"
-            labelClassName="type-h2 font-[var(--weight-medium)] mb-[var(--space-2)]"
-            contentClassName="type-body"
-          >
-            <p>
-              The system cannot determine the cluster&rsquo;s status. Neutral
-              colors and a dashed connection indicate uncertainty, while
-              contextual hints provide guidance without creating false alarms.
-            </p>
-          </InsightBlock>
-
-          <InsightBlock
-            label="Initializing"
-            labelClassName="type-h2 mb-[var(--space-2)]"
-            contentClassName="type-body"
-          >
-            <p>
-              The cluster is in the process of establishing a connection. The
-              active state is visually communicated without triggering
-              unnecessary concern.
-            </p>
-          </InsightBlock>
-        </div>
-
-        <div className="mt-[var(--space-8)]">
-          <InsightBlock label="" contentClassName="type-body-info">
-            <p>
-              This approach reduces ambiguity during monitoring and crisis
-              moments, allowing backup administrators to quickly understand
-              what&rsquo;s happening, why it matters, and when action is
-              required.
-            </p>
-          </InsightBlock>
-        </div>
-      </Section>
-
-      {/* ── 9. Master-Detail View + Impact ────────────────── */}
-      <Section>
-        <SectionTitle title="Master–Detail View - From Overview to Action">
-          <p>
-            The Data Protection overview provides a high-level snapshot of
-            system health, compliance, and active sessions. Selecting an item in
-            the topology instantly reveals detailed information in the side
-            panel, allowing administrators to move from monitoring to
-            investigation without leaving the page.
-          </p>
-        </SectionTitle>
-
-        <CaseStudyImage src={imgImage178} alt="Master-detail view" className="rounded-lg" />
-
-        <p className="mt-[var(--space-8)] type-body">
-          This master&ndash;detail approach keeps the main context visible while
-          surfacing relevant details on demand&mdash;reducing navigation,
-          preserving orientation, and enabling faster, more confident
-          decision-making.
-        </p>
-
-        <div className="mt-[var(--space-12)] md:mt-[var(--space-16)]">
-          <SectionTitle title="Impact">
-            <p>
-              This is how fund operations should feel: clear, visible, and
-              grounded.
-            </p>
-          </SectionTitle>
-
-          <InfoBoxGrid
-            items={[
-              'Faster scanning',
-              'Safer decision-making',
-              'Reduced operational risk',
-            ]}
-          />
-        </div>
-      </Section>
-
-      {/* ── 11. Final Quote ─────────────────────────────── */}
-      <ImageWithQuote
-        src={imgImage177}
-        alt="XtreamIO closing"
-        preQuote={`"Great monitoring UX doesn't simplify systems. It makes them:`}
-        quote='understandable under pressure"'
-      />
-      </CaseStudyBody>
-    </>
+      </section>
+    </div>
   );
 }
