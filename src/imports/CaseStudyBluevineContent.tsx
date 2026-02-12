@@ -99,7 +99,7 @@ function OnboardingCarousel({ images }: { images: string[] }) {
 
   return (
     <div className="relative mb-10">
-      {/* Image container — fixed aspect ratio so all images are the same size */}
+      {/* Image container - fixed aspect ratio so all images are the same size */}
       <div className="relative w-full max-w-md mx-auto aspect-[3/5] overflow-hidden rounded-xl">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.img
@@ -193,7 +193,7 @@ function DashboardCarousel({ images }: { images: string[] }) {
 
   return (
     <div className="relative mb-10">
-      {/* Image container — fixed aspect ratio for consistent sizing */}
+      {/* Image container - fixed aspect ratio for consistent sizing */}
       <div className="relative w-full aspect-[16/11] overflow-hidden rounded-xl">
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.img
@@ -251,7 +251,7 @@ function DashboardCarousel({ images }: { images: string[] }) {
 }
 
 /* ================================================================
-   BLUEVINE — "The SMB Journey"
+   BLUEVINE - "The SMB Journey"
    ──────────────────────────────────────────────────────────────
    Unique personality:
    · Soft blue accent (#eef2ff / #4f46e5)
@@ -313,7 +313,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          CONTEXT — Risk narrative with user quotes
+          CONTEXT - Risk narrative with user quotes
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -352,7 +352,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {[
               { quote: "Running payroll, paying suppliers, and managing cash flow felt like guessing.", role: null },
-              { quote: "I wasn't looking for loans all the time — I wanted confidence.", role: null },
+              { quote: "I wasn't looking for loans all the time - I wanted confidence.", role: null },
             ].map((item, i) => (
               <Reveal key={i} delay={0.25 + i * 0.08}>
                 <div className="rounded-xl p-6 md:p-8 h-full flex flex-col" style={{ border: '1px solid var(--border-subtle)' }}>
@@ -381,7 +381,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE PROBLEM — Cards + research insights
+          THE PROBLEM - Cards + research insights
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -397,7 +397,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
 
           <Reveal delay={0.1}>
             <p className="text-sm md:text-base font-light text-center mb-10 max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-              Plans and features blurred together — especially for non-financial users.
+              Plans and features blurred together - especially for non-financial users.
             </p>
           </Reveal>
 
@@ -454,7 +454,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          MAIN INSIGHT — Soft blue-tinted band
+          MAIN INSIGHT - Soft blue-tinted band
           ═══════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 md:px-12" style={{ backgroundColor: '#eef2ff' }}>
         <div className="max-w-3xl mx-auto text-center">
@@ -529,7 +529,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE CHALLENGE — Editorial framing
+          THE CHALLENGE - Editorial framing
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-3xl mx-auto text-center">
@@ -560,7 +560,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE APPROACH — Vertical timeline
+          THE APPROACH - Vertical timeline
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -580,12 +580,12 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
               {
                 num: '01',
                 title: 'Simplify Plan Differentiation',
-                desc: 'Instead of feature-heavy comparisons, we reframed plans around business size, cash flow patterns, credit usage behavior, and growth stage. Plans were translated into business outcomes — not financial jargon.',
+                desc: 'Instead of feature-heavy comparisons, we reframed plans around business size, cash flow patterns, credit usage behavior, and growth stage. Plans were translated into business outcomes - not financial jargon.',
               },
               {
                 num: '02',
                 title: 'Add Contextual Guidance During Selection',
-                desc: 'We introduced decision-based logic: plan recommendations tied to user behavior, clear explanation of what changes after upgrade, and transparent benefits and limitations. Financial commitment became predictable — not abstract.',
+                desc: 'We introduced decision-based logic: plan recommendations tied to user behavior, clear explanation of what changes after upgrade, and transparent benefits and limitations. Financial commitment became predictable - not abstract.',
               },
               {
                 num: '03',
@@ -639,7 +639,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          FROM ONBOARDING TO CONTROL — Dashboard showcase
+          FROM ONBOARDING TO CONTROL - Dashboard showcase
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-8 md:pb-12 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -681,7 +681,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          NATIVE EXPERIENCE — Mobile app carousel
+          NATIVE EXPERIENCE - Mobile app carousel
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-8 md:pb-12 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -695,7 +695,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-sm md:text-base font-light max-w-2xl mx-auto mb-10" style={{ color: 'var(--text-secondary)' }}>
-              Designing a native mobile app to give business owners full financial control from anywhere. The experience allows users to manage cards, make payments, access credit, and deposit checks through a financial-grade mobile interface — turning banking from a place you go into a tool that moves with your business.
+              Designing a native mobile app to give business owners full financial control from anywhere. The experience allows users to manage cards, make payments, access credit, and deposit checks through a financial-grade mobile interface - turning banking from a place you go into a tool that moves with your business.
             </p>
           </Reveal>
         </div>
@@ -745,7 +745,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          RESULTS — Bordered metric cards
+          RESULTS - Bordered metric cards
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -788,7 +788,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          CLOSING — Dark band with pattern
+          CLOSING - Dark band with pattern
           ═══════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-16 text-white overflow-hidden" style={{ backgroundColor: 'var(--color-gray-900)' }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{

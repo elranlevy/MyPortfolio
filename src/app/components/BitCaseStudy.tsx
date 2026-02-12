@@ -2,13 +2,12 @@ import { CaseStudyLayout } from '@/app/components/CaseStudyLayout';
 import CaseStudyBitContent from '@/imports/CaseStudyBitContent';
 
 interface BitCaseStudyProps {
-  onNavigateHome: () => void;
   onNextStudy: () => void;
 }
 
-export function BitCaseStudy({ onNavigateHome, onNextStudy }: BitCaseStudyProps) {
+export function BitCaseStudy({ onNextStudy }: BitCaseStudyProps) {
   return (
-    <CaseStudyLayout onNavigateHome={onNavigateHome}>
+    <CaseStudyLayout>
       <CaseStudyBitContent onNextStudy={onNextStudy} />
     </CaseStudyLayout>
   );

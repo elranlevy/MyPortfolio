@@ -29,7 +29,7 @@ export default defineConfig({
     ViteImageOptimizer({
       /* ── PNG ────────────────────────────────────────────────── */
       png: {
-        quality: 75,          // lossy compression — big savings
+        quality: 75,          // lossy compression - big savings
         effort: 6,            // higher = slower but smaller (0-10)
       },
       /* ── JPEG (in case any are added later) ─────────────────── */
@@ -37,7 +37,7 @@ export default defineConfig({
         quality: 75,
         mozjpeg: true,
       },
-      /* ── WebP — auto-generated for every PNG/JPEG at build ──── */
+      /* ── WebP - auto-generated for every PNG/JPEG at build ──── */
       webp: {
         quality: 78,
         effort: 5,
@@ -52,13 +52,19 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    watch: {
+      usePolling: true,
+      interval: 300,
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
   build: {
-    /* Increase chunk warning limit — portfolio images are large assets */
+    /* Increase chunk warning limit - portfolio images are large assets */
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
       output: {

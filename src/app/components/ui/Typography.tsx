@@ -8,14 +8,14 @@ import { type ReactNode, type ElementType } from 'react';
    to use consistent typography across pages.
 
    Scale:
-     display  — 48px, light   (quote banners, hero impact)
-     h1       — 36px, light   (rarely used, top-level)
-     h2       — 24px, normal  (section headings)
-     h3       — 24px, medium  (sub-section headings)
-     body     — 16px, light   (running text, descriptions)
-     bodyInfo — 16px, normal  (info boxes, facts)
-     label    — 16px, bold    (card headers, Instrument Sans)
-     caption  — 14px, medium  (meta labels, hint text)
+     display  - 48px, light   (quote banners, hero impact)
+     h1       - 36px, light   (rarely used, top-level)
+     h2       - 24px, normal  (section headings)
+     h3       - 24px, medium  (sub-section headings)
+     body     - 16px, light   (running text, descriptions)
+     bodyInfo - 16px, normal  (info boxes, facts)
+     label    - 16px, bold    (card headers, Instrument Sans)
+     caption  - 14px, medium  (meta labels, hint text)
    ================================================================ */
 
 type Variant =
@@ -66,7 +66,7 @@ interface TextProps {
 }
 
 /**
- * Text — the main typography primitive.
+ * Text - the main typography primitive.
  *
  * @example
  * <Text variant="h2">Section Title</Text>
@@ -91,7 +91,7 @@ export function Text({
    Shorthand that defaults to h2 and picks the right HTML tag.
    ────────────────────────────────────────────────────────────── */
 interface HeadingProps {
-  /** 1 | 2 | 3 — maps to h1/h2/h3 variants */
+  /** 1 | 2 | 3 - maps to h1/h2/h3 variants */
   level?: 1 | 2 | 3;
   className?: string;
   children: ReactNode;

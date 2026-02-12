@@ -49,13 +49,13 @@ function VerticalDivider() {
 }
 
 /* ================================================================
-   XTREAMIO — "Technical Precision"
+   XTREAMIO - "Technical Precision"
    ──────────────────────────────────────────────────────────────
    Unique personality:
    · Contained dark card for Key Insight (NOT full-width band)
    · Compact numbered approach list (NOT grid cards)
    · Each approach step has rich description
-   · Screenshots elevated as the star — maximum visual space
+   · Screenshots elevated as the star - maximum visual space
    · Results as minimal two-column layout on white
    · Context as dense enterprise narrative
    · Mental states model for admin workflows
@@ -111,7 +111,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          CONTEXT — Dense enterprise narrative
+          CONTEXT - Dense enterprise narrative
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -151,7 +151,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
 
           <Reveal delay={0.25}>
             <p className="text-sm md:text-base font-light text-center mb-3" style={{ color: 'var(--text-secondary)' }}>
-              Administrators monitor all of these — at once.
+              Administrators monitor all of these - at once.
             </p>
           </Reveal>
 
@@ -171,7 +171,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE PROBLEM — Mental states model
+          THE PROBLEM - Mental states model
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -239,7 +239,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
                 The interface needed to simplify without oversimplifying.
               </p>
               <p className="text-base md:text-lg font-medium" style={{ color: 'var(--text-primary)' }}>
-                Technical users value clarity and control — not decoration.
+                Technical users value clarity and control - not decoration.
               </p>
             </div>
           </Reveal>
@@ -289,7 +289,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
               </Reveal>
             </div>
 
-            {/* Key Insight — contained dark card (unique to XtremIO) */}
+            {/* Key Insight - contained dark card (unique to XtremIO) */}
             <div className="flex items-center">
               <Reveal delay={0.15}>
                 <div
@@ -319,7 +319,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          FROM COMPLEX TO CLEAR — Flow comparison
+          FROM COMPLEX TO CLEAR - Flow comparison
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -332,7 +332,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             </p>
           </Reveal>
 
-          {/* BEFORE — Legacy flow */}
+          {/* BEFORE - Legacy flow */}
           <Reveal delay={0.1}>
             <p className="text-[10px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--text-tertiary)' }}>Before</p>
             <div className="rounded-xl p-6 md:p-8 mb-8" style={{ backgroundColor: 'var(--surface-secondary)' }}>
@@ -372,7 +372,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             </p>
           </Reveal>
 
-          {/* AFTER — Redesigned flow */}
+          {/* AFTER - Redesigned flow */}
           <Reveal delay={0.25}>
             <p className="text-[10px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--text-tertiary)' }}>After</p>
             <div className="rounded-xl p-6 md:p-8" style={{ backgroundColor: 'var(--surface-secondary)' }}>
@@ -398,7 +398,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE APPROACH — Compact numbered list with descriptions
+          THE APPROACH - Compact numbered list with descriptions
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -436,7 +436,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
                 num: '04',
                 icon: <PanelRightOpen className="w-5 h-5" strokeWidth={1.4} />,
                 title: 'Preserve Context with Master-Detail Views',
-                desc: 'We introduced a master-detail interaction pattern: the overview remains visible while selecting an item reveals a detailed side panel. Monitoring → investigation without navigation loss. This preserves orientation — critical in enterprise environments.',
+                desc: 'We introduced a master-detail interaction pattern: the overview remains visible while selecting an item reveals a detailed side panel. Monitoring → investigation without navigation loss. This preserves orientation - critical in enterprise environments.',
                 points: null,
               },
             ].map((step, i) => (
@@ -477,7 +477,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          DESIGN VISUALS — Screenshots elevated as the star
+          DESIGN VISUALS - Screenshots elevated as the star
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-8 md:pb-12 px-6 md:px-12 lg:px-16">
         {/* Dashboard Overview */}
@@ -487,7 +487,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="text-xl md:text-2xl font-semibold mb-4 leading-snug" style={{ color: 'var(--text-primary)' }}>
-              Dashboard Overview with Mega Tabs (Health / Performance / Capacity) — Information at the Right Level
+              Dashboard Overview with Mega Tabs (Health / Performance / Capacity) - Information at the Right Level
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -518,7 +518,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
           <Reveal delay={0.28}>
             <div className="max-w-4xl mx-auto my-8">
               <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                By presenting high-level signals first and detailed insights second, the mega tabs support fast decision-making during routine monitoring and high-pressure situations alike — helping backup administrators stay in control and act with confidence.
+                By presenting high-level signals first and detailed insights second, the mega tabs support fast decision-making during routine monitoring and high-pressure situations alike - helping backup administrators stay in control and act with confidence.
               </p>
             </div>
           </Reveal>
@@ -527,7 +527,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
           <Reveal delay={0.3}>
             <div className="max-w-4xl mx-auto mt-8 mb-6">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 leading-snug" style={{ color: 'var(--text-primary)' }}>
-                Cluster Connectivity — Clear Status at a Glance
+                Cluster Connectivity - Clear Status at a Glance
               </h3>
               <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 The cluster connectivity component provides an immediate, visual understanding of the relationship between the XMS and the cluster. By using consistent icons, colors, and connection lines, administrators can instantly identify the current state without interpreting logs or alerts.
@@ -535,7 +535,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             </div>
           </Reveal>
           <Reveal delay={0.33}>
-            <img src={imgClusterStatus} alt="Cluster connectivity status — Connected, Disconnected, Unknown, Initializing states" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            <img src={imgClusterStatus} alt="Cluster connectivity status - Connected, Disconnected, Unknown, Initializing states" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
           </Reveal>
           <Reveal delay={0.35}>
             <div className="max-w-4xl mx-auto my-8">
@@ -548,7 +548,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
           <Reveal delay={0.38}>
             <div className="max-w-4xl mx-auto mt-8 mb-6">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 leading-snug" style={{ color: 'var(--text-primary)' }}>
-                Master-Detail View — From Overview to Action
+                Master-Detail View - From Overview to Action
               </h3>
               <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 The Data Protection overview provides a high-level snapshot of system health, compliance, and active sessions. Selecting an item in the topology instantly reveals detailed information in the side panel, allowing administrators to move from monitoring to investigation without leaving the page.
@@ -556,12 +556,12 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             </div>
           </Reveal>
           <Reveal delay={0.4}>
-            <img src={imgImage178} alt="Master-detail view — Data Protection overview with topology and side panel" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            <img src={imgImage178} alt="Master-detail view - Data Protection overview with topology and side panel" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
           </Reveal>
           <Reveal delay={0.42}>
             <div className="max-w-4xl mx-auto my-8">
               <p className="text-sm font-light leading-relaxed italic" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-secondary)' }}>
-                This master-detail approach keeps the main context visible while surfacing relevant details on demand — reducing navigation, preserving orientation, and enabling faster, more confident decision-making.
+                This master-detail approach keeps the main context visible while surfacing relevant details on demand - reducing navigation, preserving orientation, and enabling faster, more confident decision-making.
               </p>
             </div>
           </Reveal>
@@ -588,7 +588,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          DESIGN PRINCIPLES — From ideation insights
+          DESIGN PRINCIPLES - From ideation insights
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-3xl mx-auto">
@@ -638,7 +638,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          RESULTS — Minimal two-column on white
+          RESULTS - Minimal two-column on white
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -682,7 +682,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          CLOSING — Dark band with pattern
+          CLOSING - Dark band with pattern
           ═══════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-16 text-white overflow-hidden" style={{ backgroundColor: 'var(--color-gray-900)' }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{

@@ -7,12 +7,12 @@ import { type ReactNode, type CSSProperties } from 'react';
    Use design tokens via Tailwind classes wherever possible.
 
    Components:
-     Container      — max-width wrapper with responsive padding
-     WideContainer  — wider variant for hero / full-width sections
-     Stack          — vertical flex with configurable gap
-     Section        — full-width band with vertical rhythm + container
-     Divider        — horizontal rule
-     Grid           — CSS grid with responsive columns
+     Container      - max-width wrapper with responsive padding
+     WideContainer  - wider variant for hero / full-width sections
+     Stack          - vertical flex with configurable gap
+     Section        - full-width band with vertical rhythm + container
+     Divider        - horizontal rule
+     Grid           - CSS grid with responsive columns
    ================================================================ */
 
 /* ── Container ─────────────────────────────────────────────────

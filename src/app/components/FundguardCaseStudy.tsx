@@ -2,13 +2,12 @@ import { CaseStudyLayout } from '@/app/components/CaseStudyLayout';
 import CaseStudyFundguardContent from '@/imports/CaseStudyFundguardContent';
 
 interface FundguardCaseStudyProps {
-  onNavigateHome: () => void;
   onNextStudy: () => void;
 }
 
-export function FundguardCaseStudy({ onNavigateHome, onNextStudy }: FundguardCaseStudyProps) {
+export function FundguardCaseStudy({ onNextStudy }: FundguardCaseStudyProps) {
   return (
-    <CaseStudyLayout onNavigateHome={onNavigateHome}>
+    <CaseStudyLayout>
       <CaseStudyFundguardContent onNextStudy={onNextStudy} />
     </CaseStudyLayout>
   );

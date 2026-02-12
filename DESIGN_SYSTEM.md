@@ -1,4 +1,4 @@
-# Elran Portfolio — Design System
+# Elran Portfolio - Design System
 
 > Single source of truth for design tokens, typography, spacing, layout, and components.
 > Extracted from [Figma: Design-to-adi](https://www.figma.com/design/uTyzNOimrajFLMt3toEDqY/Design-to-adi?node-id=0-1)
@@ -108,8 +108,8 @@ This is the most important distinction in the type system:
 
 | Context | Class | Weight | Line height | Tracking |
 |---------|-------|--------|-------------|----------|
-| **Free-flowing narrative** — SectionTitle descriptions, standalone paragraphs, persona quotes | `.type-body` | Light (300) | 1.75 | 0.64px |
-| **Inside cards/boxes** — InsightBlock, HypothesisBlock, InfoBoxGrid, step descriptions | `.type-body-info` | Normal (400) | 1.5 | 0.32px |
+| **Free-flowing narrative** - SectionTitle descriptions, standalone paragraphs, persona quotes | `.type-body` | Light (300) | 1.75 | 0.64px |
+| **Inside cards/boxes** - InsightBlock, HypothesisBlock, InfoBoxGrid, step descriptions | `.type-body-info` | Normal (400) | 1.5 | 0.32px |
 
 **Rule**: If the text is inside a colored container (typically `bg-surface-secondary`), use `.type-body-info`. If it's in the open page flow, use `.type-body`.
 
@@ -390,7 +390,7 @@ The token structure supports dark mode by overriding semantic tokens:
 }
 ```
 
-Not enabled by default (Figma design is light-only). The structure is ready — just add the overrides when needed.
+Not enabled by default (Figma design is light-only). The structure is ready - just add the overrides when needed.
 
 ---
 
@@ -398,12 +398,12 @@ Not enabled by default (Figma design is light-only). The structure is ready — 
 
 ### Priority order for remaining pages:
 
-1. **`CaseStudyBitContent.tsx`** — Replace hardcoded hex colors with tokens
-2. **`CaseStudyXreamioContent.tsx`** — Replace colors + spacing with tokens
-3. **`CaseStudyMondayContent.tsx`** — Replace colors + spacing with tokens
-4. **`CaseStudyBluevineContent.tsx`** — Replace colors + spacing with tokens
-5. **`AboutPage.tsx`** — Apply type scale + layout primitives
-6. **`ContactPage.tsx`** — Apply type scale + layout primitives
+1. **`CaseStudyBitContent.tsx`** - Replace hardcoded hex colors with tokens
+2. **`CaseStudyXreamioContent.tsx`** - Replace colors + spacing with tokens
+3. **`CaseStudyMondayContent.tsx`** - Replace colors + spacing with tokens
+4. **`CaseStudyBluevineContent.tsx`** - Replace colors + spacing with tokens
+5. **`AboutPage.tsx`** - Apply type scale + layout primitives
+6. **`ContactPage.tsx`** - Apply type scale + layout primitives
 
 ### For each page:
 

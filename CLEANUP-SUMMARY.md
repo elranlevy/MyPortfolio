@@ -13,18 +13,18 @@
 ## What Was Removed
 
 ### Unused UI Components (48 files)
-**Entire `src/app/components/ui/` folder** — shadcn/radix-ui component library scaffolding.
+**Entire `src/app/components/ui/` folder** - shadcn/radix-ui component library scaffolding.
 Zero imports outside the folder. Safe: project uses Tailwind inline classes + motion.
 
 ### Unused Figma Imports (45 files)
-37 component files + 13 SVG asset modules from `src/imports/` — old Figma node iterations
+37 component files + 13 SVG asset modules from `src/imports/` - old Figma node iterations
 (e.g., `HeroMainPage-38-96.tsx`, `Frame15-44-365.tsx`, `Ewrew.tsx`, `PorjectPage.tsx`).
 Only referenced internally or not at all. 13 used files retained.
 
 ### Orphaned App Components (3 files)
-- `CaseStudyPage.tsx` — never imported
-- `BitPhoneSlideshow.tsx` — never imported
-- `figma/ImageWithFallback.tsx` — never imported
+- `CaseStudyPage.tsx` - never imported
+- `BitPhoneSlideshow.tsx` - never imported
+- `figma/ImageWithFallback.tsx` - never imported
 
 ### Orphaned PNG Assets (25 files)
 Hash-named PNGs in `src/assets/` only referenced by deleted import files.
@@ -36,11 +36,11 @@ All `@radix-ui/*` (26), `@emotion/*`, `@mui/*`, `react-dnd`, `recharts`, `react-
 `@popperjs/core`, `react-resizable-panels`, `class-variance-authority`, `clsx`, `tailwind-merge`.
 
 ### Dead CSS Tokens
-- Dark mode theme (`.dark {}` block) — no dark mode toggle exists
-- Sidebar tokens (`--sidebar-*`) — no sidebar component used
-- Chart tokens (`--chart-*`) — no chart component used
+- Dark mode theme (`.dark {}` block) - no dark mode toggle exists
+- Sidebar tokens (`--sidebar-*`) - no sidebar component used
+- Chart tokens (`--chart-*`) - no chart component used
 - Unused semantic tokens (card, popover, primary, secondary, muted, accent, destructive, input, switch)
-- Unused font: (none — Instrument Sans was re-added after finding 40+ references in content files)
+- Unused font: (none - Instrument Sans was re-added after finding 40+ references in content files)
 
 ### Dead Code in Components
 - `mobileMenuOpen` / `useState` in all 5 case study wrappers (declared, never used)
@@ -77,10 +77,10 @@ Moved `react`/`react-dom` from peerDependencies to regular dependencies.
 ## Remaining TODOs
 
 - [x] **Typos in Figma-generated filenames**: `CaseStuty` renamed to `CaseStudy`, `Conent` renamed to `Content`. All import paths updated.
-- [ ] **No router**: App uses `useState` for page switching — no URL-based navigation. Consider adding `react-router` if deep linking is needed.
+- [ ] **No router**: App uses `useState` for page switching - no URL-based navigation. Consider adding `react-router` if deep linking is needed.
 - [ ] **Large JS bundle**: 844 kB gzipped to 261 kB. Consider code-splitting case study pages with `React.lazy()`.
 - [ ] **No tests**: Consider adding basic render smoke tests for key pages.
-- [ ] **Instrument Sans font** uses Figma's `font-['Instrument_Sans:Bold',sans-serif]` syntax in Tailwind classes — works but is unconventional. Consider mapping to a proper `@font-face` declaration if customization is needed.
+- [ ] **Instrument Sans font** uses Figma's `font-['Instrument_Sans:Bold',sans-serif]` syntax in Tailwind classes - works but is unconventional. Consider mapping to a proper `@font-face` declaration if customization is needed.
 
 ## Commit History
 

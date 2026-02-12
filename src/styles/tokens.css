@@ -1,5 +1,5 @@
 /* ================================================================
-   Design Tokens — Single Source of Truth
+   Design Tokens - Single Source of Truth
    ================================================================
    Extracted from Figma: Design-to-adi (uTyzNOimrajFLMt3toEDqY)
 
@@ -43,9 +43,9 @@
   /* ── Semantic Color Tokens ────────────────────────────────── */
 
   /* Text */
-  --text-primary:   var(--color-gray-900);  /* #182730 — headings, titles */
-  --text-secondary: var(--color-gray-700);  /* #1e3543 — body, captions  */
-  --text-tertiary:  var(--color-blue-400);  /* #467294 — labels, accents */
+  --text-primary:   var(--color-gray-900);  /* #182730 - headings, titles */
+  --text-secondary: var(--color-gray-700);  /* #1e3543 - body, captions  */
+  --text-tertiary:  var(--color-blue-400);  /* #467294 - labels, accents */
   --text-inverse:   var(--color-white);
   --text-on-dark:   var(--color-white);
 
@@ -75,7 +75,7 @@
   --font-alt:     'Inter', sans-serif;
   --font-serif:   'Playfair Display', serif;
 
-  /* Type scale — desktop sizes (mobile handled by responsive TW classes) */
+  /* Type scale - desktop sizes (mobile handled by responsive TW classes) */
   --text-display: 48px;   /* Quote banners, hero impact text     */
   --text-h1:      36px;   /* Main headline (rare, e.g. Outcome)  */
   --text-h2:      24px;   /* Section headings                    */
@@ -131,9 +131,9 @@
 
   /* ── Layout ───────────────────────────────────────────────── */
 
-  --content-max-w:      64rem;   /* 1024px — max-w-5xl   */
+  --content-max-w:      64rem;   /* 1024px - max-w-5xl   */
   --content-wide-max-w: 105rem;  /* 1680px               */
-  --content-hero-max-w: 56rem;   /* 896px  — max-w-4xl   */
+  --content-hero-max-w: 56rem;   /* 896px  - max-w-4xl   */
 
   --content-px:    var(--space-6);   /* 24px  mobile  */
   --content-px-md: var(--space-8);   /* 32px  tablet  */

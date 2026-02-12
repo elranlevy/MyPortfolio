@@ -65,7 +65,7 @@ function VerticalDivider() {
 }
 
 /* ================================================================
-   FUNDGUARD — "The Deep Enterprise"
+   FUNDGUARD - "The Deep Enterprise"
    ──────────────────────────────────────────────────────────────
    Unique personality:
    · Left-aligned editorial pull-quotes
@@ -143,7 +143,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          CONTEXT — Editorial narrative with icon pills
+          CONTEXT - Editorial narrative with icon pills
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -200,7 +200,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
                 Tables hide system logic.
               </p>
               <p className="mt-3 text-sm font-light" style={{ color: 'var(--text-secondary)' }}>
-                Experts needed to reason about structure — not edit rows.
+                Experts needed to reason about structure - not edit rows.
               </p>
             </div>
           </Reveal>
@@ -210,7 +210,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
             <div className="mt-14 max-w-5xl mx-auto">
               <img
                 src={imgTableBefore}
-                alt="FundGuard legacy table — annotations showing high cognitive load, poor hierarchy visibility, scalability issues, and limited flexibility"
+                alt="FundGuard legacy table - annotations showing high cognitive load, poor hierarchy visibility, scalability issues, and limited flexibility"
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"
@@ -223,7 +223,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE CHALLENGE — Two-column editorial
+          THE CHALLENGE - Two-column editorial
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -234,7 +234,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
-            {/* Left — narrative */}
+            {/* Left - narrative */}
             <div className="md:col-span-3">
               <Reveal>
                 <h2
@@ -266,7 +266,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
               </Reveal>
             </div>
 
-            {/* Right — key tension */}
+            {/* Right - key tension */}
             <div className="md:col-span-2">
               <Reveal delay={0.15}>
                 <div
@@ -298,7 +298,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          WHAT USERS TOLD US — Editorial testimony cards
+          WHAT USERS TOLD US - Editorial testimony cards
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -319,7 +319,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
                 role: 'Senior Accountant',
               },
               {
-                quote: "Updating fund data feels risky — I only find errors after reports are generated.",
+                quote: "Updating fund data feels risky - I only find errors after reports are generated.",
                 role: 'Accountant',
               },
               {
@@ -340,7 +340,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
                     &ldquo;{item.quote}&rdquo;
                   </p>
                   <p className="text-xs uppercase tracking-wider mt-5" style={{ color: 'var(--text-tertiary)' }}>
-                    — {item.role}
+                    - {item.role}
                   </p>
                 </div>
               </Reveal>
@@ -364,7 +364,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          KEY INSIGHT — Serif blockquote with left accent border
+          KEY INSIGHT - Serif blockquote with left accent border
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-3xl mx-auto">
@@ -382,7 +382,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
                 className="text-2xl md:text-3xl lg:text-4xl font-normal leading-[1.25] mb-3"
                 style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}
               >
-                Users manually verified automated results — even when accuracy was high.
+                Users manually verified automated results - even when accuracy was high.
               </p>
               <p
                 className="text-lg md:text-xl font-normal leading-snug italic mt-4"
@@ -407,7 +407,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          HYPOTHESIS-DRIVEN DESIGN — Unique editorial framing
+          HYPOTHESIS-DRIVEN DESIGN - Unique editorial framing
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -528,7 +528,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          DESIGN PRINCIPLE — Centered editorial statement
+          DESIGN PRINCIPLE - Centered editorial statement
           ═══════════════════════════════════════════════════════ */}
       <section className="py-14 md:py-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-3xl mx-auto text-center">
@@ -573,7 +573,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
           </Reveal>
         </div>
 
-        {/* Hierarchy View — Canvas-Based */}
+        {/* Hierarchy View - Canvas-Based */}
         <Reveal delay={0.35}>
           <div
             className="max-w-5xl mx-auto mt-16 rounded-2xl p-8 md:p-12"
@@ -594,7 +594,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
             <div className="rounded-xl overflow-hidden">
               <img
                 src={imgHierarchyCanvas}
-                alt="Canvas-based fund hierarchy view — nodes represent funds, connections show allocations"
+                alt="Canvas-based fund hierarchy view - nodes represent funds, connections show allocations"
                 className="w-full h-auto"
                 loading="lazy"
                 decoding="async"
@@ -607,7 +607,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          DESIGN FLOW — Annotated canvas walkthrough
+          DESIGN FLOW - Annotated canvas walkthrough
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -625,11 +625,11 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
 
           <div className="flex flex-col gap-8">
             {[
-              { src: imgFlow1, alt: 'Design flow — canvas hierarchy initial state' },
-              { src: imgFlow2, alt: 'Design flow — configuring fund connections' },
-              { src: imgFlow3, alt: 'Design flow — validating relationships and allocations' },
-              { src: imgFlow4, alt: 'Design flow — system state overview' },
-              { src: imgFlow5, alt: 'Design flow — final hierarchy with outcome' },
+              { src: imgFlow1, alt: 'Design flow - canvas hierarchy initial state' },
+              { src: imgFlow2, alt: 'Design flow - configuring fund connections' },
+              { src: imgFlow3, alt: 'Design flow - validating relationships and allocations' },
+              { src: imgFlow4, alt: 'Design flow - system state overview' },
+              { src: imgFlow5, alt: 'Design flow - final hierarchy with outcome' },
             ].map((img, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <img
@@ -649,7 +649,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE SOLUTION — Vertical timeline with editorial framing
+          THE SOLUTION - Vertical timeline with editorial framing
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -675,29 +675,25 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
               {
                 num: '01',
                 title: 'Canvas-Based Fund Hierarchy',
-                icon: <Network className="w-5 h-5" strokeWidth={1.4} />,
                 desc: 'A visual, drag-and-drop hierarchy replaced the legacy table structure. Funds represented as nodes, allocations displayed directly on connections, status visible at a glance.',
                 cta: 'From editing rows → to understanding structure.',
               },
               {
                 num: '02',
                 title: 'Guided Reconciliation Workflow',
-                icon: <Workflow className="w-5 h-5" strokeWidth={1.4} />,
                 desc: 'Replaced dashboard-heavy navigation with structured progression: clear checkpoints, visible state transitions, context-aware actions, reduced tab switching.',
                 cta: null,
               },
               {
                 num: '03',
                 title: 'Intelligent Exception Handling',
-                icon: <ShieldCheck className="w-5 h-5" strokeWidth={1.4} />,
                 desc: 'Risk-based prioritization with financial impact surfaced first. Contextual resolution tools reduced cognitive overload.',
                 cta: null,
               },
               {
                 num: '04',
                 title: 'Explainable AI',
-                icon: <BrainCircuit className="w-5 h-5" strokeWidth={1.4} />,
-                desc: 'Confidence indicators, traceable reasoning paths, audit trail visibility, and clear anomaly signals. Automation became inspectable — not opaque.',
+                desc: 'Confidence indicators, traceable reasoning paths, audit trail visibility, and clear anomaly signals. Automation became inspectable - not opaque.',
                 cta: null,
               },
             ].map((step, i) => (
@@ -712,12 +708,9 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
                   </div>
                   {/* Content */}
                   <div className="pt-0.5 flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div style={{ color: 'var(--text-tertiary)' }}>{step.icon}</div>
-                      <p className="text-base md:text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
-                        {step.title}
-                      </p>
-                    </div>
+                    <p className="text-base md:text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+                      {step.title}
+                    </p>
                     <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                       {step.desc}
                     </p>
@@ -740,7 +733,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          RESULTS — Outlined stat cards on white
+          RESULTS - Outlined stat cards on white
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -805,7 +798,7 @@ export default function CaseStudyFundguardContent({ onNextStudy }: { onNextStudy
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          CLOSING — Dark band with subtle pattern
+          CLOSING - Dark band with subtle pattern
           ═══════════════════════════════════════════════════════ */}
       <section
         className="relative py-24 md:py-32 px-6 md:px-12 lg:px-16 text-white overflow-hidden"

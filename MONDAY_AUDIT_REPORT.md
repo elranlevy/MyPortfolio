@@ -3,7 +3,7 @@
 
 ---
 
-## Section 1: Hero — ✅ MATCH
+## Section 1: Hero - ✅ MATCH
 **Figma:** "monday hero 1" (y=524)
 - **Text:** ✅ MATCH
   - Title: "Designing confidence at the moment of commitment,\nwhen users are ready - but afraid to choose wrong."
@@ -15,7 +15,7 @@
 
 ---
 
-## Section 2: The Challenge — ⚠️ PARTIAL MATCH
+## Section 2: The Challenge - ⚠️ PARTIAL MATCH
 **Figma:** "monday page 1" (y=1604)
 - **Text:** ⚠️ MOSTLY MATCH (1 extra text in Figma)
   - ✅ "The Challenge" title matches
@@ -38,7 +38,7 @@
 
 ---
 
-## Section 3: Personas — ✅ MATCH
+## Section 3: Personas - ✅ MATCH
 **Figma:** "monday page 2" (y=2562)
 - **Text:** ✅ MATCH
   - ✅ Title: "Choosing the Right Plan Shouldn't Feel Risky" matches
@@ -57,7 +57,7 @@
 
 ---
 
-## Section 4: Approach + Making Choice Feel Safe — ✅ MATCH
+## Section 4: Approach + Making Choice Feel Safe - ✅ MATCH
 **Figma:** "monday page 3" (y=3916) - Contains both sections
 - **Text:** ✅ MATCH
   - ✅ "How I Approached the Problem" title matches
@@ -86,7 +86,7 @@
 
 ---
 
-## Section 5: Design Process + Outcome — ✅ MATCH
+## Section 5: Design Process + Outcome - ✅ MATCH
 **Figma:** "monday page 4" (y=5318) - Contains Design Process, Outcome, and Hypotheses
 - **Text:** ✅ MATCH
   - ✅ "Design Process" title matches
@@ -101,7 +101,7 @@
 
 ---
 
-## Section 6: A/B Test — ✅ MATCH
+## Section 6: A/B Test - ✅ MATCH
 **Figma:** "monday page 5" (y=7234)
 - **Text:** ✅ MATCH
   - ✅ "A/B Test: Pro Recommendation Experience" title matches
@@ -119,7 +119,7 @@
 
 ---
 
-## Section 7: Visual Guidance — ✅ MATCH
+## Section 7: Visual Guidance - ✅ MATCH
 **Figma:** "monday page 6" (y=10868)
 - **Text:** ✅ MATCH
   - ✅ "Helping Users Choose the Right Plan with Visual Guidance" title matches
@@ -133,7 +133,7 @@
 
 ---
 
-## Section 8: Promoting Discovery — ✅ MATCH
+## Section 8: Promoting Discovery - ✅ MATCH
 **Figma:** "monday page 9" (y=14681)
 - **Text:** ✅ MATCH
   - ✅ "Promoting Discovery Through Value, Not Just Access" title matches
@@ -149,7 +149,7 @@
 
 ---
 
-## Section 9: Outcome Quote — ✅ MATCH
+## Section 9: Outcome Quote - ✅ MATCH
 **Figma:** "monday page 8" (y=20278)
 - **Text:** ✅ MATCH
   - ✅ Quote text matches exactly: "The improved experience led to a significant increase in product adoption and engagement, driving a 170% growth in usage. By reducing friction, increasing clarity, and giving users faster financial control, the product shifted from a functional tool to a daily business essential."
@@ -158,7 +158,7 @@
 
 ---
 
-## Section 10: Footer Quote — ✅ MATCH
+## Section 10: Footer Quote - ✅ MATCH
 **Figma:** "footer" (y=20800)
 - **Text:** ✅ MATCH
   - ✅ "Good monetization UX doesn't push users to pay." matches

@@ -2,13 +2,12 @@ import { CaseStudyLayout } from '@/app/components/CaseStudyLayout';
 import CaseStudyBluevineContent from '@/imports/CaseStudyBluevineContent';
 
 interface BluevineCaseStudyProps {
-  onNavigateHome: () => void;
   onNextStudy: () => void;
 }
 
-export function BluevineCaseStudy({ onNavigateHome, onNextStudy }: BluevineCaseStudyProps) {
+export function BluevineCaseStudy({ onNextStudy }: BluevineCaseStudyProps) {
   return (
-    <CaseStudyLayout onNavigateHome={onNavigateHome}>
+    <CaseStudyLayout>
       <CaseStudyBluevineContent onNextStudy={onNextStudy} />
     </CaseStudyLayout>
   );

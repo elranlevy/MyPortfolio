@@ -2,13 +2,12 @@ import { CaseStudyLayout } from '@/app/components/CaseStudyLayout';
 import CaseStudyMondayContent from '@/imports/CaseStudyMondayContent';
 
 interface MondayCaseStudyProps {
-  onNavigateHome: () => void;
   onNextStudy: () => void;
 }
 
-export function MondayCaseStudy({ onNavigateHome, onNextStudy }: MondayCaseStudyProps) {
+export function MondayCaseStudy({ onNextStudy }: MondayCaseStudyProps) {
   return (
-    <CaseStudyLayout onNavigateHome={onNavigateHome}>
+    <CaseStudyLayout>
       <CaseStudyMondayContent onNextStudy={onNextStudy} />
     </CaseStudyLayout>
   );

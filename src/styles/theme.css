@@ -1,5 +1,5 @@
 /* ================================================================
-   Theme — Tailwind v4 Bridge & Base Styles
+   Theme - Tailwind v4 Bridge & Base Styles
    ================================================================
    Maps design tokens (from tokens.css) → Tailwind utility classes
    via @theme inline, and sets global base styles.
@@ -94,7 +94,7 @@
     line-height: var(--leading-normal);
   }
 
-  /* Heading defaults — Figma uses LH normal for headings */
+  /* Heading defaults - Figma uses LH normal for headings */
   h1, h2, h3, h4 {
     font-weight: var(--weight-medium);
     line-height: normal;
@@ -124,7 +124,7 @@
    Use these in components for consistent typography.
    ────────────────────────────────────────────────────────────── */
 @layer utilities {
-  /* Display — 48px, light, wide tracking (quote banners) */
+  /* Display - 48px, light, wide tracking (quote banners) */
   .type-display {
     font-family: var(--font-sans);
     font-weight: var(--weight-light);
@@ -133,7 +133,7 @@
     letter-spacing: var(--tracking-wide);
   }
 
-  /* H1 — 36px, light, tight (main headline, rare — e.g. Outcome banners) */
+  /* H1 - 36px, light, tight (main headline, rare - e.g. Outcome banners) */
   .type-h1 {
     font-family: var(--font-sans);
     font-weight: var(--weight-light);
@@ -142,7 +142,7 @@
     letter-spacing: var(--tracking-normal);
   }
 
-  /* Hero title — 24px, light, normal LH (case study hero pages — Figma: Poppins Light 24px) */
+  /* Hero title - 24px, light, normal LH (case study hero pages - Figma: Poppins Light 24px) */
   .type-hero-title {
     font-family: var(--font-sans);
     font-weight: var(--weight-light);
@@ -152,7 +152,7 @@
     color: var(--color-black);
   }
 
-  /* H2 — 24px, normal, section headings (Figma: LH normal ≈ 1.2) */
+  /* H2 - 24px, normal, section headings (Figma: LH normal ≈ 1.2) */
   .type-h2 {
     font-family: var(--font-sans);
     font-weight: var(--weight-normal);
@@ -162,7 +162,7 @@
     color: var(--text-primary);
   }
 
-  /* H3 — 24px, medium, hypothesis / subsection (Figma: LH 1.5, LS 0.32) */
+  /* H3 - 24px, medium, hypothesis / subsection (Figma: LH 1.5, LS 0.32) */
   .type-h3 {
     font-family: var(--font-sans);
     font-weight: var(--weight-medium);
@@ -172,7 +172,7 @@
     color: var(--text-secondary);
   }
 
-  /* Body — 16px, light, wide line-height, body tracking */
+  /* Body - 16px, light, wide line-height, body tracking */
   .type-body {
     font-family: var(--font-sans);
     font-weight: var(--weight-light);
@@ -182,7 +182,7 @@
     color: var(--text-secondary);
   }
 
-  /* Body info — 16px, normal, info-box tracking */
+  /* Body info - 16px, normal, info-box tracking */
   .type-body-info {
     font-family: var(--font-sans);
     font-weight: var(--weight-normal);
@@ -192,7 +192,7 @@
     color: var(--text-secondary);
   }
 
-  /* Label — Instrument Sans, 16px bold, wide tracking, capitalize (card headers) */
+  /* Label - Instrument Sans, 16px bold, wide tracking, capitalize (card headers) */
   .type-label {
     font-family: var(--font-display);
     font-weight: var(--weight-bold);
@@ -203,7 +203,7 @@
     color: var(--text-tertiary);
   }
 
-  /* Caption — 16px, regular, 0.32 tracking (hypothesis labels, insight labels) */
+  /* Caption - 16px, regular, 0.32 tracking (hypothesis labels, insight labels) */
   .type-caption {
     font-family: var(--font-sans);
     font-weight: var(--weight-normal);
@@ -213,7 +213,7 @@
     color: var(--text-secondary);
   }
 
-  /* Insight title — Inter, 24px medium */
+  /* Insight title - Inter, 24px medium */
   .type-insight-title {
     font-family: var(--font-alt);
     font-weight: var(--weight-medium);
@@ -222,7 +222,7 @@
     color: var(--text-primary);
   }
 
-  /* Overlay text — force white on dark image backgrounds */
+  /* Overlay text - force white on dark image backgrounds */
   .text-on-image {
     color: #ffffff !important;
   }

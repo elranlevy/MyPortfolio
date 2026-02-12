@@ -78,7 +78,7 @@ function MondayLogo() {
 }
 
 /* ================================================================
-   MONDAY.COM — "The Growth Experiment"
+   MONDAY.COM - "The Growth Experiment"
    ──────────────────────────────────────────────────────────────
    Unique personality:
    · Warm cream Key Insight band
@@ -139,7 +139,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          CONTEXT — Editorial narrative
+          CONTEXT - Editorial narrative
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -211,7 +211,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE CHALLENGE — Two-column editorial
+          THE CHALLENGE - Two-column editorial
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -222,7 +222,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16">
-            {/* Left — narrative */}
+            {/* Left - narrative */}
             <div className="md:col-span-3">
               <Reveal>
                 <h2 className="text-2xl md:text-3xl font-semibold mb-6 leading-snug" style={{ color: 'var(--text-primary)' }}>
@@ -270,7 +270,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
               </Reveal>
             </div>
 
-            {/* Right — key tension */}
+            {/* Right - key tension */}
             <div className="md:col-span-2">
               <Reveal delay={0.15}>
                 <div className="rounded-xl p-6 md:p-8" style={{ backgroundColor: 'var(--surface-secondary)' }}>
@@ -278,7 +278,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
                     Key insight
                   </p>
                   <p className="text-lg md:text-xl font-medium leading-snug italic mb-3" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>
-                    Abandonment wasn&rsquo;t rejection — it was avoidance.
+                    Abandonment wasn&rsquo;t rejection - it was avoidance.
                   </p>
                   <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     When the perceived cost of a wrong decision felt higher than the value of continuing, users left.
@@ -293,7 +293,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          MY OWNERSHIP — Compact icon + list
+          MY OWNERSHIP - Compact icon + list
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -339,7 +339,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          CORE INSIGHT — Warm cream band
+          CORE INSIGHT - Warm cream band
           ═══════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 md:px-12" style={{ backgroundColor: '#faf7f2' }}>
         <div className="max-w-3xl mx-auto text-center">
@@ -365,7 +365,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          HYPOTHESIS-DRIVEN DESIGN — 3 Hypotheses
+          HYPOTHESIS-DRIVEN DESIGN - 3 Hypotheses
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -389,7 +389,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
               <div className="ml-0 md:ml-11">
                 <div className="rounded-xl p-6" style={{ backgroundColor: 'var(--surface-secondary)' }}>
                   <p className="text-sm font-light leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
-                    Instead of forcing self-diagnosis, we analyzed trial usage and surfaced: &ldquo;Recommended for you — based on your activity.&rdquo;
+                    Instead of forcing self-diagnosis, we analyzed trial usage and surfaced: &ldquo;Recommended for you - based on your activity.&rdquo;
                   </p>
                   <div className="flex flex-col gap-2">
                     {[
@@ -453,7 +453,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
                   H3
                 </div>
                 <p className="text-sm md:text-base font-medium" style={{ color: 'var(--text-primary)' }}>
-                  If recommended plans highlight outcomes — not just features — users perceive higher value and convert faster.
+                  If recommended plans highlight outcomes - not just features - users perceive higher value and convert faster.
                 </p>
               </div>
               <div className="ml-0 md:ml-11">
@@ -467,7 +467,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
                     ))}
                   </div>
                   <p className="text-sm font-light italic" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-secondary)' }}>
-                    Upgrade felt like continuation — not escalation.
+                    Upgrade felt like continuation - not escalation.
                   </p>
                 </div>
               </div>
@@ -479,7 +479,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE APPROACH — Vertical timeline
+          THE APPROACH - Vertical timeline
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -509,7 +509,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
               {
                 num: '03',
                 title: 'Simplify the Commitment Moment',
-                desc: 'Reduced redundant comparison loops, overwhelming feature density, and clarified reversibility. Lower the risk of choosing — not the price.',
+                desc: 'Reduced redundant comparison loops, overwhelming feature density, and clarified reversibility. Lower the risk of choosing - not the price.',
               },
               {
                 num: '04',
@@ -536,7 +536,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          A/B TEST — The star of this study
+          A/B TEST - The star of this study
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-8 md:pb-12 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -567,8 +567,8 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
           {/* Variant cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
             {[
-              { label: 'Variant A', model: '"Trust us — Pro is better for you."', pattern: 'Recommendation + Feature explanation + "Why" banner' },
-              { label: 'Variant B', model: '"Here\'s evidence — Pro fits how you work."', pattern: 'Recommendation + Usage proof + Recommendation' },
+              { label: 'Variant A', model: '"Trust us - Pro is better for you."', pattern: 'Recommendation + Feature explanation + "Why" banner' },
+              { label: 'Variant B', model: '"Here\'s evidence - Pro fits how you work."', pattern: 'Recommendation + Usage proof + Recommendation' },
             ].map((v, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="p-6 rounded-xl" style={{ backgroundColor: 'var(--surface-secondary)' }}>
@@ -591,7 +591,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
                 Usage-Driven Recommendations Increased Pro Conversions by 35%
               </h3>
               <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                We tested two upgrade experiences — a generic recommendation vs. a usage-based personalized recommendation — to measure impact on Pro conversion. The usage-driven experience increased conversion from 4.0% to 5.4%, delivering a 35% relative uplift and higher user trust in the upgrade recommendation.
+                We tested two upgrade experiences - a generic recommendation vs. a usage-based personalized recommendation - to measure impact on Pro conversion. The usage-driven experience increased conversion from 4.0% to 5.4%, delivering a 35% relative uplift and higher user trust in the upgrade recommendation.
               </p>
             </div>
           </Reveal>
@@ -672,7 +672,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          FEATURE DISCOVERY — Contextual value
+          FEATURE DISCOVERY - Contextual value
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-4 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -727,7 +727,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          RESULTS — Stat cards + editorial close
+          RESULTS - Stat cards + editorial close
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -770,7 +770,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          CLOSING — Dark band with pattern
+          CLOSING - Dark band with pattern
           ═══════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-16 text-white overflow-hidden" style={{ backgroundColor: 'var(--color-gray-900)' }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{
@@ -803,7 +803,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
               The moment of commitment became safer.
             </p>
             <p className="text-lg md:text-xl font-normal italic mt-2 text-white" style={{ fontFamily: 'var(--font-serif)' }}>
-              And when choosing feels safe — growth follows.
+              And when choosing feels safe - growth follows.
             </p>
           </Reveal>
         </div>

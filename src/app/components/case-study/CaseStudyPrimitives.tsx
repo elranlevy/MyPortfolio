@@ -1,7 +1,7 @@
 import { type ReactNode, useRef, useEffect, useState, useCallback } from 'react';
 
 /* ============================================================
-   Case Study Primitives — Responsive building blocks
+   Case Study Primitives - Responsive building blocks
    ============================================================
    All primitives consume design tokens from tokens.css via:
    - CSS custom properties: var(--token-name)
@@ -11,7 +11,7 @@ import { type ReactNode, useRef, useEffect, useState, useCallback } from 'react'
    Layout contract:
      Parent (CaseStudyLayout) provides a snap-y mandatory container.
      CaseStudyHero is one full-screen snap page.
-     CaseStudyBody wraps the rest — it snaps to start, then
+     CaseStudyBody wraps the rest - it snaps to start, then
      scrolls normally like a document.
    ============================================================ */
 
@@ -80,7 +80,7 @@ export function CaseStudyHero({
       {/* Logo */}
       <div className="w-40 md:w-52 lg:w-64">{logo}</div>
 
-      {/* Title & subtitle — Figma: Poppins Light 24px, LH normal, text-black */}
+      {/* Title & subtitle - Figma: Poppins Light 24px, LH normal, text-black */}
       <div className="text-center max-w-[var(--content-hero-max-w)] flex flex-col gap-0">
         <h1 className="type-hero-title">
           {title}
@@ -92,7 +92,7 @@ export function CaseStudyHero({
         )}
       </div>
 
-      {/* Hero image — above the fold, prioritize loading */}
+      {/* Hero image - above the fold, prioritize loading */}
       <div className={heroImageClassName ?? "w-full max-w-3xl lg:max-w-4xl flex-1 min-h-0 flex items-start mt-[var(--space-4)]"}>
         <img
           src={heroImage}
@@ -508,7 +508,7 @@ export function ImageGrid({
   );
 }
 
-// ── Image Carousel — slideshow with chevrons, autoplay & dots ─
+// ── Image Carousel - slideshow with chevrons, autoplay & dots ─
 export function ImageCarousel({
   images,
   alt = '',
@@ -567,7 +567,7 @@ export function ImageCarousel({
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Slide track — capped to 70vh so one slide fits in view */}
+      {/* Slide track - capped to 70vh so one slide fits in view */}
       <div className="overflow-hidden rounded-[var(--radius-lg)] max-h-[70vh]">
         <div
           ref={trackRef}
@@ -631,7 +631,7 @@ export function ImageCarousel({
   );
 }
 
-// ── Lazy Video — only loads & plays when visible ─────────────
+// ── Lazy Video - only loads & plays when visible ─────────────
 export function LazyVideo({
   src,
   className = '',

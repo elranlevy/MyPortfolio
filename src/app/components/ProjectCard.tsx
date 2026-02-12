@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 /* ================================================================
-   ProjectCard — Elegant project showcase card
+   ProjectCard - Elegant project showcase card
    ================================================================
    Inspired by natalielabel.com: horizontal layout with tags,
    subtle hover effects, and a clean text CTA.
@@ -15,7 +15,7 @@ interface ProjectCardProps {
   tags?: string[];
   imagePosition?: 'left' | 'right';
   onClick?: () => void;
-  /** @deprecated kept for backward compat — use tags instead */
+  /** @deprecated kept for backward compat - use tags instead */
   backgroundColor?: string;
 }
 

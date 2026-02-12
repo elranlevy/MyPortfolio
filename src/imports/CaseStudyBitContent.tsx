@@ -166,7 +166,7 @@ function MobileCarousel({ images }: { images: string[] }) {
 }
 
 /* ================================================================
-   BIT — "The Visual-Led Mobile"
+   BIT - "The Visual-Led Mobile"
    ──────────────────────────────────────────────────────────────
    Unique personality:
    · Dark gradient Key Insight (navy→slate)
@@ -228,7 +228,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          CONTEXT — High-stress narrative with user quotes
+          CONTEXT - High-stress narrative with user quotes
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -299,7 +299,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE PROBLEM — Bold challenge framing
+          THE PROBLEM - Bold challenge framing
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-16 md:pb-20 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -426,7 +426,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
-            {/* Left — Steps */}
+            {/* Left - Steps */}
             <div className="flex flex-col gap-0">
               {[
                 {
@@ -463,12 +463,12 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
               ))}
             </div>
 
-            {/* Right — Sketch flow image */}
+            {/* Right - Sketch flow image */}
             <Reveal delay={0.2}>
               <div className="flex items-center">
                 <img
                   src={imgSketchFlow}
-                  alt="Payment flow sketch — Select Person → Enter Total → Skip/Add Note → Send Now"
+                  alt="Payment flow sketch - Select Person → Enter Total → Skip/Add Note → Send Now"
                   className="w-full h-auto"
                   loading="lazy"
                   decoding="async"
@@ -482,7 +482,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
               Each screen removes noise and answers only the question users have at that moment.
               <br />
               <span className="font-medium" style={{ color: 'var(--text-primary)' }}>
-                Lean design wasn&rsquo;t a style choice — it was a usability strategy.
+                Lean design wasn&rsquo;t a style choice - it was a usability strategy.
               </span>
             </p>
           </Reveal>
@@ -492,7 +492,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          KEY INSIGHT — Dark gradient band
+          KEY INSIGHT - Dark gradient band
           ═══════════════════════════════════════════════════════ */}
       <section
         className="py-24 md:py-36 px-6 md:px-12"
@@ -532,7 +532,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          THE APPROACH — Vertical timeline
+          THE APPROACH - Vertical timeline
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -552,22 +552,22 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
               {
                 num: '01',
                 title: 'Reduce Cognitive Load in Transfer Flows',
-                desc: 'One decision per screen. Instead of multi-field forms, I structured the flow around single mental actions: Who am I paying? How much? Why (optional)? Confirm with full clarity. Lean design wasn\'t a style choice — it was a usability strategy.',
+                desc: 'One decision per screen. Instead of multi-field forms, I structured the flow around single mental actions: Who am I paying? How much? Why (optional)? Confirm with full clarity. Lean design wasn\'t a style choice - it was a usability strategy.',
               },
               {
                 num: '02',
                 title: 'Clarify Transaction States',
-                desc: 'High-frequency payments require state transparency: clear loading indicators, explicit success confirmation, no ambiguous "pending" confusion, and visible feedback loops. We designed transaction clarity as a trust mechanism — not a UI detail.',
+                desc: 'High-frequency payments require state transparency: clear loading indicators, explicit success confirmation, no ambiguous "pending" confusion, and visible feedback loops. We designed transaction clarity as a trust mechanism - not a UI detail.',
               },
               {
                 num: '03',
                 title: 'Improve First-Use Activation',
-                desc: 'Instead of heavy onboarding: Intent → Selection → Completion. Progressive disclosure, context retention, and immediate reward after first transfer. Make the first successful transfer feel effortless — because first success drives repeat usage.',
+                desc: 'Instead of heavy onboarding: Intent → Selection → Completion. Progressive disclosure, context retention, and immediate reward after first transfer. Make the first successful transfer feel effortless - because first success drives repeat usage.',
               },
               {
                 num: '04',
                 title: 'Optimize Micro-Interactions',
-                desc: 'Subtle animated transitions, responsive feedback, and visual continuity between steps. From first tap to final confirmation, the flow felt continuous — not fragmented. Speed mattered more than polish. Decisions were made quickly — but never blindly.',
+                desc: 'Subtle animated transitions, responsive feedback, and visual continuity between steps. From first tap to final confirmation, the flow felt continuous - not fragmented. Speed mattered more than polish. Decisions were made quickly - but never blindly.',
               },
             ].map((step, i) => (
               <Reveal key={i} delay={i * 0.1}>
@@ -589,7 +589,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          DESIGN PHILOSOPHY — Rapid iteration cycle
+          DESIGN PHILOSOPHY - Rapid iteration cycle
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -598,10 +598,10 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
             <div className="rounded-xl p-8 md:p-10 mb-12" style={{ backgroundColor: 'var(--surface-secondary)' }}>
               <p className="text-xs uppercase tracking-[0.15em] mb-2" style={{ color: 'var(--text-tertiary)' }}>Key insight:</p>
               <p className="text-xl md:text-2xl font-medium leading-snug mb-4" style={{ color: 'var(--text-primary)' }}>
-                Lean design wasn&rsquo;t a style choice — it was a usability strategy.
+                Lean design wasn&rsquo;t a style choice - it was a usability strategy.
               </p>
               <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                Speed mattered more than polish — decisions were made quickly, but never blindly.
+                Speed mattered more than polish - decisions were made quickly, but never blindly.
                 <br />
                 This insight became the backbone of the flow.
               </p>
@@ -645,7 +645,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
             <div className="hidden md:flex justify-center items-center gap-4 mt-6">
               <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
               <p className="text-xs font-light italic px-3" style={{ color: 'var(--text-tertiary)' }}>
-                Sketch → test → iterate → release — repeat
+                Sketch → test → iterate → release - repeat
               </p>
               <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
             </div>
@@ -656,7 +656,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          PAYMENT FLOW SCREENS — Carousel
+          PAYMENT FLOW SCREENS - Carousel
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
@@ -664,7 +664,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
             <div className="rounded-xl p-8 md:p-10 mb-12" style={{ backgroundColor: 'var(--surface-secondary)' }}>
               <p className="text-xs uppercase tracking-[0.15em] mb-2" style={{ color: 'var(--text-tertiary)' }}>Key insight:</p>
               <p className="text-xl md:text-2xl font-medium leading-snug mb-4" style={{ color: 'var(--text-primary)' }}>
-                Lean design wasn&rsquo;t a style choice — it was a usability strategy.
+                Lean design wasn&rsquo;t a style choice - it was a usability strategy.
               </p>
               <p className="text-sm font-light" style={{ color: 'var(--text-secondary)' }}>
                 This insight became the backbone of the flow.
@@ -679,7 +679,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          ANNOTATED FLOW — Step-by-step breakdown
+          ANNOTATED FLOW - Step-by-step breakdown
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-8 md:pb-12 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
@@ -711,7 +711,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          SEAMLESS MOTION — Elevated visual moment
+          SEAMLESS MOTION - Elevated visual moment
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 px-6 md:px-12" style={{ backgroundColor: 'var(--surface-secondary)' }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -740,7 +740,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          DESIGN PHILOSOPHY — Rapid signal reading
+          DESIGN PHILOSOPHY - Rapid signal reading
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-3xl mx-auto">
@@ -786,7 +786,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
-          RESULTS — Stat cards + editorial close
+          RESULTS - Stat cards + editorial close
           ═══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto">
@@ -827,7 +827,7 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          CLOSING — Dark band with pattern
+          CLOSING - Dark band with pattern
           ═══════════════════════════════════════════════════════ */}
       <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-16 text-white overflow-hidden" style={{ backgroundColor: 'var(--color-gray-900)' }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{
