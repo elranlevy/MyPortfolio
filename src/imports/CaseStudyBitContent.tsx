@@ -593,18 +593,51 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
         <div className="max-w-5xl mx-auto">
-          {/* Key insight callout */}
-          <Reveal>
-            <div className="rounded-xl p-8 md:p-10 mb-12" style={{ backgroundColor: 'var(--surface-secondary)' }}>
-              <p className="text-xs uppercase tracking-[0.15em] mb-2" style={{ color: 'var(--text-tertiary)' }}>Key insight:</p>
-              <p className="text-xl md:text-2xl font-medium leading-snug mb-4" style={{ color: 'var(--text-primary)' }}>
-                Lean design wasn&rsquo;t a style choice - it was a usability strategy.
+          {/* Design Philosophy in Action */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <Reveal>
+              <p className="text-[11px] uppercase tracking-[0.3em] mb-8 text-center" style={{ color: 'var(--text-tertiary)' }}>Design Philosophy in Action</p>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <p className="text-sm md:text-base font-light text-center mb-8" style={{ color: 'var(--text-secondary)' }}>
+                Instead of heavy upfront research, I focused on rapid signal reading:
               </p>
-              <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                Speed mattered more than polish - decisions were made quickly, but never blindly.
-                <br />
-                This insight became the backbone of the flow.
+            </Reveal>
+
+            <Reveal delay={0.15}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                {[
+                  { icon: <Eye className="w-5 h-5" strokeWidth={1.4} />, label: 'Where users hesitate' },
+                  { icon: <AlertTriangle className="w-5 h-5" strokeWidth={1.4} />, label: 'Where errors occur' },
+                  { icon: <MessageCircle className="w-5 h-5" strokeWidth={1.4} />, label: 'Where support spikes' },
+                  { icon: <Search className="w-5 h-5" strokeWidth={1.4} />, label: 'Where abandonment happens' },
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-3 p-4 rounded-xl" style={{ backgroundColor: 'var(--surface-secondary)' }}>
+                    <div style={{ color: 'var(--text-primary)' }}>{item.icon}</div>
+                    <p className="text-xs md:text-sm font-light leading-snug" style={{ color: 'var(--text-secondary)' }}>{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.2}>
+              <div className="text-center">
+                <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
+                  Aggressively reduce friction. Simplify without dumbing down.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Process cycle label */}
+          <Reveal delay={0.05}>
+            <div className="hidden md:flex justify-center items-center gap-4 mb-8">
+              <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
+              <p className="text-lg font-light italic px-3" style={{ color: 'var(--text-tertiary)' }}>
+                Sketch → test → iterate → release - repeat
               </p>
+              <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
             </div>
           </Reveal>
 
@@ -617,11 +650,11 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-full overflow-hidden rounded-xl mb-4" style={{ border: '1px solid var(--border-subtle)' }}>
+                  <div className="w-full overflow-hidden rounded-xl mb-4 aspect-[9/16]" style={{ border: '1px solid var(--border-subtle)' }}>
                     <img
                       src={item.img}
                       alt={item.label}
-                      className="w-full h-auto"
+                      className="w-full h-full object-cover object-top"
                       loading="lazy"
                       decoding="async"
                     />
@@ -639,17 +672,6 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
               </Reveal>
             ))}
           </div>
-
-          {/* Connecting arrows between steps (desktop only) */}
-          <Reveal delay={0.3}>
-            <div className="hidden md:flex justify-center items-center gap-4 mt-6">
-              <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
-              <p className="text-xs font-light italic px-3" style={{ color: 'var(--text-tertiary)' }}>
-                Sketch → test → iterate → release - repeat
-              </p>
-              <div className="flex-1 h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -726,60 +748,12 @@ export default function CaseStudyBitContent({ onNextStudy }: { onNextStudy?: () 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
             {[seamlessMotion1, seamlessMotion2, seamlessMotion3, seamlessMotion4].map((src, i) => (
               <Reveal key={i} delay={i * 0.08}>
-                <div className="aspect-[223/493] overflow-hidden rounded-2xl shadow-lg relative">
-                  <div className="absolute inset-0">
-                    <LazyVideo src={src} className="w-full h-full object-cover" />
-                  </div>
+                <div className="overflow-hidden shadow-lg">
+                  <LazyVideo src={src} className="w-full h-auto block" />
                 </div>
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <VerticalDivider />
-
-      {/* ═══════════════════════════════════════════════════════
-          DESIGN PHILOSOPHY - Rapid signal reading
-          ═══════════════════════════════════════════════════════ */}
-      <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
-        <div className="max-w-3xl mx-auto">
-          <Reveal>
-            <p className="text-[11px] uppercase tracking-[0.3em] mb-8 text-center" style={{ color: 'var(--text-tertiary)' }}>Design Philosophy in Action</p>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="text-sm md:text-base font-light text-center mb-8" style={{ color: 'var(--text-secondary)' }}>
-              Instead of heavy upfront research, I focused on rapid signal reading:
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.15}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {[
-                { icon: <Eye className="w-5 h-5" strokeWidth={1.4} />, label: 'Where users hesitate' },
-                { icon: <AlertTriangle className="w-5 h-5" strokeWidth={1.4} />, label: 'Where errors occur' },
-                { icon: <MessageCircle className="w-5 h-5" strokeWidth={1.4} />, label: 'Where support spikes' },
-                { icon: <Search className="w-5 h-5" strokeWidth={1.4} />, label: 'Where abandonment happens' },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-3 p-4 rounded-xl" style={{ backgroundColor: 'var(--surface-secondary)' }}>
-                  <div style={{ color: 'var(--text-primary)' }}>{item.icon}</div>
-                  <p className="text-xs md:text-sm font-light leading-snug" style={{ color: 'var(--text-secondary)' }}>{item.label}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <div className="text-center">
-              <p className="text-sm font-light mb-2" style={{ color: 'var(--text-secondary)' }}>
-                Sketch → test (guerrilla style) → iterate → release.
-              </p>
-              <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
-                Aggressively reduce friction. Simplify without dumbing down.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 

@@ -63,7 +63,7 @@ function VerticalDivider() {
 }
 
 /* ── Onboarding carousel ─────────────────────────────────────── */
-function OnboardingCarousel({ images }: { images: string[] }) {
+function OnboardingCarousel({ images, variant = 'mobile' }: { images: string[]; variant?: 'mobile' | 'desktop' }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -100,13 +100,13 @@ function OnboardingCarousel({ images }: { images: string[] }) {
   return (
     <div className="relative mb-10">
       {/* Image container - fixed aspect ratio so all images are the same size */}
-      <div className="relative w-full max-w-md mx-auto aspect-[3/5] overflow-hidden rounded-xl">
+      <div className={`relative w-full mx-auto overflow-hidden rounded-xl ${variant === 'desktop' ? 'max-w-4xl aspect-[16/10]' : 'max-w-md aspect-[3/5]'}`}>
         <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.img
             key={current}
             src={images[current]}
             alt={`Onboarding step ${current + 1}`}
-            className="absolute inset-0 w-full h-full object-cover rounded-xl"
+            className="absolute inset-0 w-full h-full object-contain rounded-xl"
             loading="lazy"
             decoding="async"
             custom={direction}
@@ -632,7 +632,7 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.2em] mb-6 text-center" style={{ color: 'var(--text-tertiary)' }}>Onboarding Journey</p>
           </Reveal>
-          <OnboardingCarousel images={[imgImage184, imgImage185, imgImage186, imgImage187]} />
+          <OnboardingCarousel images={[imgImage184, imgImage185, imgImage186, imgImage187]} variant="desktop" />
         </div>
       </section>
 

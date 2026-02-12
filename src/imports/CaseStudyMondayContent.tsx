@@ -39,6 +39,10 @@ import imgDiscovery213 from 'figma:asset/46afff3de4b74b1fcd9fb6e6c6e34dc0511a134
 import imgPromoted214 from 'figma:asset/2abdc6c0f0e1dc734eb659df7608c23f65d0828f.png';
 import imgPromoted215 from 'figma:asset/590fcf0486ea5c0624f74a9ad643a26091276ee4.png';
 import imgAbChart from '@/assets/monday-ab-chart.png';
+import imgDiscoveryValue1 from '@/assets/monday-discovery-value-1.png';
+import imgDiscoveryValue2 from '@/assets/monday-discovery-value-2.png';
+import imgPromotedMatch1 from '@/assets/monday-promoted-match-1.png';
+import imgPromotedMatch2 from '@/assets/monday-promoted-match-2.png';
 import whyStandardVideo from '@/assets/why-standard-video.mp4';
 import whyProVideo from '@/assets/why-pro-video.mp4';
 
@@ -710,16 +714,29 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
           </Reveal>
         </div>
 
+      </section>
+
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
+          DISCOVERY VALUE & PROMOTED FEATURES - Full-width layout
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-4 px-6 md:px-12 lg:px-16">
+        <div className="max-w-6xl mx-auto space-y-5 mb-16">
+          <Reveal>
+            <img src={imgDiscoveryValue1} alt="Discovery through value — contextual feature surfacing" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+          </Reveal>
+          <Reveal>
+            <img src={imgDiscoveryValue2} alt="Discovery through value — premium feature overlay" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+          </Reveal>
+        </div>
+
         <div className="max-w-6xl mx-auto space-y-5">
           <Reveal>
-            <img src={imgDiscovery212} alt="Feature discovery" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            <img src={imgPromotedMatch1} alt="Promoted features matching user workflow" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <Reveal delay={0.08}><img src={imgDiscovery213} alt="Discovery detail" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" /></Reveal>
-            <Reveal delay={0.12}><img src={imgPromoted214} alt="Promoted features" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" /></Reveal>
-          </div>
           <Reveal>
-            <img src={imgPromoted215} alt="Promoted features detail" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            <img src={imgPromotedMatch2} alt="Promoted features — full experience view" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
           </Reveal>
         </div>
       </section>
