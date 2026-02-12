@@ -303,8 +303,8 @@ export function App() {
      ================================================================ */
   return (
     <div className="min-h-screen bg-white">
-      {/* -- Global Fixed Navigation (visible on all pages) --------- */}
-      <motion.header
+      {/* -- Global Fixed Navigation (hidden on case study pages) ----- */}
+      {(currentPage === 'home' || currentPage === 'contact') && <motion.header
         className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md"
         style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}
         initial={{ y: -100, opacity: 0 }}
@@ -353,7 +353,7 @@ export function App() {
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
-      </motion.header>
+      </motion.header>}
 
       {/* -- Mobile Menu --------------------------------------------- */}
       <AnimatePresence>

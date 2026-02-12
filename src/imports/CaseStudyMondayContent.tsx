@@ -101,7 +101,7 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
       <section className="pt-24 md:pt-32 lg:pt-40 pb-6 md:pb-8 px-6 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
-            <div className="mb-8"><MondayLogo /></div>
+            <p className="text-xs tracking-[0.3em] mb-6" style={{ color: 'var(--text-tertiary)' }}>monday.com</p>
           </Reveal>
 
           <Reveal delay={0.1}>

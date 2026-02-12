@@ -699,8 +699,12 @@ export default function CaseStudyBluevineContent({ onNextStudy }: { onNextStudy?
             </p>
           </Reveal>
         </div>
-        <div className="max-w-6xl mx-auto">
-          <OnboardingCarousel images={[imgNative3, imgNative1, imgNative2, imgNative4, imgNative5, imgNative6, imgNative7]} />
+        <div className="max-w-4xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-4">
+          {[imgNative3, imgNative1, imgNative2, imgNative4, imgNative5, imgNative6, imgNative7].map((src, i) => (
+            <Reveal key={i} delay={i * 0.06}>
+              <img src={src} alt={`Native app screen ${i + 1}`} className="w-full h-auto rounded-xl" style={{ border: '8px solid #f5f5f5' }} loading="lazy" decoding="async" />
+            </Reveal>
+          ))}
         </div>
       </section>
 

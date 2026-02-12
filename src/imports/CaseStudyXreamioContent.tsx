@@ -27,6 +27,7 @@ import imgImage172 from 'figma:asset/d39fb3cca29d3b2153e74727f2bd2167584b2b3c.pn
 import imgImage174 from 'figma:asset/dc4843ec408a4532c53cdacb5ed2533eecd0dc2e.png';
 import imgImage176 from 'figma:asset/d4d58b02892ddfba3736780450879b582c47390e.png';
 import imgClusterStatus from 'figma:asset/1310cf6034e7996a8a437beaf595a9e75ee70205.png';
+import imgHealthStatus from '@/assets/xtreamio-health-status.png';
 import imgImage178 from 'figma:asset/d7831a442bc44faf1090c9e711599d69abfabc41.png';
 import imgImage177 from 'figma:asset/84697da8fef42b33bbdcddc2442ef98a82019325.png';
 
@@ -319,6 +320,58 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
       <VerticalDivider />
 
       {/* ═══════════════════════════════════════════════════════
+          DESIGN PRINCIPLES - From ideation insights
+          ═══════════════════════════════════════════════════════ */}
+      <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
+        <div className="max-w-3xl mx-auto">
+          <Reveal>
+            <p className="text-[11px] uppercase tracking-[0.3em] mb-8 text-center" style={{ color: 'var(--text-tertiary)' }}>Design Principles</p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p className="text-sm md:text-base font-light text-center mb-8" style={{ color: 'var(--text-secondary)' }}>
+              From ideation insights:
+            </p>
+          </Reveal>
+
+          <div className="flex flex-col gap-0">
+            {[
+              { icon: <Eye className="w-4 h-4" strokeWidth={1.4} />, text: 'Show only what\u2019s needed, when needed' },
+              { icon: <Zap className="w-4 h-4" strokeWidth={1.4} />, text: 'Automate the minimum required decisions' },
+              { icon: <MonitorCheck className="w-4 h-4" strokeWidth={1.4} />, text: 'Speak the administrator\u2019s language' },
+              { icon: <Lightbulb className="w-4 h-4" strokeWidth={1.4} />, text: 'Guide, but let users decide' },
+              { icon: <Shield className="w-4 h-4" strokeWidth={1.4} />, text: 'Keep systems optimistic \u2014 not alarming' },
+            ].map((item, i, arr) => (
+              <Reveal key={i} delay={0.15 + i * 0.06}>
+                <div
+                  className="flex items-center gap-4 py-4"
+                  style={{ borderBottom: i < arr.length - 1 ? '1px solid var(--border-subtle)' : undefined }}
+                >
+                  <div style={{ color: 'var(--text-tertiary)' }}>{item.icon}</div>
+                  <p className="text-sm md:text-base font-light" style={{ color: 'var(--text-primary)' }}>{item.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.5}>
+            <div className="mt-10 text-center">
+              <p className="text-sm md:text-base font-light mb-2" style={{ color: 'var(--text-secondary)' }}>
+                The goal was not visual simplification.
+              </p>
+              <p className="text-base md:text-lg font-normal italic" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>
+                It was cognitive simplification.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <VerticalDivider />
+
+      <VerticalDivider />
+
+      {/* ═══════════════════════════════════════════════════════
           FROM COMPLEX TO CLEAR - Flow comparison
           ═══════════════════════════════════════════════════════ */}
       <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
@@ -376,18 +429,16 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
           <Reveal delay={0.25}>
             <p className="text-[10px] uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--text-tertiary)' }}>After</p>
             <div className="rounded-xl p-6 md:p-8" style={{ backgroundColor: 'var(--surface-secondary)' }}>
-              <div className="flex items-center gap-3 md:gap-4">
+              <div className="flex items-start gap-3 md:gap-4">
                 <span className="px-3 py-1.5 rounded-md text-xs font-light whitespace-nowrap" style={{ border: '1px solid var(--border-subtle)', color: 'var(--text-primary)', backgroundColor: 'white' }}>Select VM&rsquo;s</span>
-                <span className="text-xs" style={{ color: 'var(--text-tertiary)' }}>→</span>
-                <span className="px-3 py-1.5 rounded-md text-xs font-light whitespace-nowrap" style={{ border: '1px solid var(--border-subtle)', color: 'var(--text-primary)', backgroundColor: 'white' }}>Select Policy</span>
-                <span className="text-xs" style={{ color: 'var(--text-tertiary)' }}>→</span>
+                <span className="text-xs pt-1.5" style={{ color: 'var(--text-tertiary)' }}>→</span>
+                <div className="flex flex-col items-center">
+                  <span className="px-3 py-1.5 rounded-md text-xs font-light whitespace-nowrap" style={{ border: '1px solid var(--border-subtle)', color: 'var(--text-primary)', backgroundColor: 'white' }}>Select Policy</span>
+                  <div className="w-px h-5 mt-2" style={{ backgroundColor: 'var(--border-subtle)' }} />
+                  <span className="px-3 py-1.5 rounded-md text-[11px] font-light mt-1" style={{ border: '1px dashed var(--border-subtle)', color: 'var(--text-tertiary)' }}>Advanced</span>
+                </div>
+                <span className="text-xs pt-1.5" style={{ color: 'var(--text-tertiary)' }}>→</span>
                 <span className="px-4 py-1.5 rounded-md text-xs font-medium text-white whitespace-nowrap" style={{ backgroundColor: '#22b8cf' }}>Done!</span>
-              </div>
-              <div className="flex items-center gap-3 mt-3 ml-[calc(50%-20px)]">
-                <div className="w-px h-5" style={{ backgroundColor: 'var(--border-subtle)' }} />
-              </div>
-              <div className="flex items-center gap-3 ml-[calc(50%-42px)]">
-                <span className="px-3 py-1.5 rounded-md text-[11px] font-light" style={{ border: '1px dashed var(--border-subtle)', color: 'var(--text-tertiary)' }}>Advanced</span>
               </div>
               <p className="text-[10px] mt-4 italic" style={{ color: 'var(--text-tertiary)' }}>3 steps · clear path · optional depth</p>
             </div>
@@ -413,28 +464,24 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             {[
               {
                 num: '01',
-                icon: <Layers className="w-5 h-5" strokeWidth={1.4} />,
                 title: 'Simplify Data Hierarchy in Dashboards',
                 desc: 'The dashboard was reorganized into three mega-tabs: Health, Performance, and Capacity. Each tab surfaces critical signals first. High-level indicators appear immediately; deep details are accessible on demand.',
                 points: ['Reduces cognitive load', 'Supports faster scanning', 'Enables quick escalation decisions'],
               },
               {
                 num: '02',
-                icon: <Bell className="w-5 h-5" strokeWidth={1.4} />,
                 title: 'Improve Visibility of System Status & Alerts',
                 desc: 'Cluster connectivity was redesigned into clear visual states: Connected (green, solid), Unknown (neutral, dashed), Disconnected (red, broken), Initializing (active without false alarm). Instead of interpreting logs, administrators understand status instantly.',
                 points: null,
               },
               {
                 num: '03',
-                icon: <Zap className="w-5 h-5" strokeWidth={1.4} />,
                 title: 'Reduce Steps in Frequent Admin Actions',
                 desc: 'The legacy protection flow forced low-level configuration decisions too early. The redesigned flow starts with selecting virtual machines, applies existing policy, and completes setup in a linear path. Advanced configuration surfaces only when needed.',
                 points: ['Setup time reduced', 'Errors minimized', 'Confidence increased'],
               },
               {
                 num: '04',
-                icon: <PanelRightOpen className="w-5 h-5" strokeWidth={1.4} />,
                 title: 'Preserve Context with Master-Detail Views',
                 desc: 'We introduced a master-detail interaction pattern: the overview remains visible while selecting an item reveals a detailed side panel. Monitoring → investigation without navigation loss. This preserves orientation - critical in enterprise environments.',
                 points: null,
@@ -446,10 +493,7 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
                     {step.num}
                   </div>
                   <div className="pt-0.5 flex-1">
-                    <div className="flex items-center gap-2.5 mb-2">
-                      <div style={{ color: 'var(--text-tertiary)' }}>{step.icon}</div>
-                      <p className="text-base md:text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>{step.title}</p>
-                    </div>
+                    <p className="text-base md:text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>{step.title}</p>
                     <p className="text-sm md:text-base font-light leading-relaxed mb-3" style={{ color: 'var(--text-secondary)' }}>{step.desc}</p>
                     {step.points && (
                       <div className="flex flex-wrap gap-2">
@@ -495,27 +539,22 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
               The dashboard is organized around three high-level mega tabs: Health, Performance, and Capacity. Each tab surfaces the most critical information for that domain, allowing administrators to quickly understand system status without digging through multiple screens.
             </p>
           </Reveal>
+          <Reveal delay={0.15}>
+            <img src={imgImage174} alt="Health monitoring" className="w-full h-auto rounded-xl mt-8" loading="lazy" decoding="async" />
+          </Reveal>
         </div>
 
         <div className="max-w-[1400px] mx-auto space-y-4">
-          <Reveal delay={0.15}>
-            <img src={imgImage172} alt="XtremIO dashboard overview with Health, Performance, and Capacity mega tabs" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
-          </Reveal>
-
           <Reveal delay={0.18}>
             <div className="max-w-4xl mx-auto my-8">
               <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 This structure reduces cognitive load by grouping related metrics into a single, focused view. Instead of scanning scattered data points, users can assess system health, performance trends, or capacity risks at a glance and then drill down only when needed.
               </p>
+              <img src={imgImage175} alt="XtremIO storage management dashboard" className="w-full h-auto rounded-xl mt-8" loading="lazy" decoding="async" />
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Reveal delay={0.2}><img src={imgImage174} alt="Health monitoring" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" /></Reveal>
-            <Reveal delay={0.25}><img src={imgImage176} alt="Capacity monitoring" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" /></Reveal>
-          </div>
-
-          <Reveal delay={0.28}>
+          <Reveal delay={0.2}>
             <div className="max-w-4xl mx-auto my-8">
               <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 By presenting high-level signals first and detailed insights second, the mega tabs support fast decision-making during routine monitoring and high-pressure situations alike - helping backup administrators stay in control and act with confidence.
@@ -523,9 +562,22 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             </div>
           </Reveal>
 
+          <Reveal delay={0.25}>
+            <div className="max-w-4xl mx-auto">
+              <img src={imgImage176} alt="Capacity monitoring" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            </div>
+          </Reveal>
+
           {/* Cluster Connectivity section */}
+        </div>
+      </section>
+
+      <VerticalDivider />
+
+      <section className="pb-8 md:pb-12 px-6 md:px-12 lg:px-16">
+        <div className="max-w-[1400px] mx-auto space-y-4">
           <Reveal delay={0.3}>
-            <div className="max-w-4xl mx-auto mt-8 mb-6">
+            <div className="max-w-4xl mx-auto mt-8 mb-12">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 leading-snug" style={{ color: 'var(--text-primary)' }}>
                 Cluster Connectivity - Clear Status at a Glance
               </h3>
@@ -534,17 +586,65 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
               </p>
             </div>
           </Reveal>
+          {/* Two-column: text descriptions left, Health Status image right */}
           <Reveal delay={0.33}>
-            <img src={imgClusterStatus} alt="Cluster connectivity status - Connected, Disconnected, Unknown, Initializing states" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-[0.55fr_1.45fr] gap-4 md:gap-6">
+                {/* Left: State descriptions */}
+                <div className="flex flex-col gap-5 py-1">
+                  {[
+                    {
+                      title: 'Connected',
+                      desc: 'Both systems are communicating normally. The solid connection line and green indicators confirm that the cluster is healthy and fully operational.',
+                    },
+                    {
+                      title: 'Disconnected',
+                      desc: 'Communication between the XMS and the cluster is interrupted. The broken connection line and red indicator clearly signal an issue that requires attention.',
+                    },
+                    {
+                      title: 'Unknown',
+                      desc: 'The system cannot determine the cluster\u2019s status. Neutral colors and a dashed connection indicate uncertainty, while contextual hints provide guidance without creating false alarms.',
+                    },
+                    {
+                      title: 'Initializing',
+                      desc: 'The cluster is in the process of establishing a connection. The active state is visually communicated without triggering unnecessary concern.',
+                    },
+                  ].map((state, i) => (
+                    <div key={i}>
+                      <p className="text-base md:text-lg font-semibold mb-2 leading-snug" style={{ color: 'var(--text-primary)' }}>
+                        {state.title}
+                      </p>
+                      <p className="text-xs font-light leading-[1.75] tracking-wide" style={{ color: 'var(--text-secondary)' }}>
+                        {state.desc}
+                      </p>
+                      {i < 3 && <div className="w-48 h-px mt-4" style={{ backgroundColor: 'var(--border-subtle)' }} />}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Right: Health Status image */}
+                <div className="flex items-start justify-center">
+                  <img src={imgHealthStatus} alt="Cluster connectivity health status states" className="w-[70%] h-auto rounded-xl" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </div>
           </Reveal>
+
           <Reveal delay={0.35}>
-            <div className="max-w-4xl mx-auto my-8">
-              <p className="text-sm font-light leading-relaxed italic" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-secondary)' }}>
+            <div className="max-w-4xl mx-auto my-8 rounded-lg px-8 py-6" style={{ backgroundColor: '#f5f5f5' }}>
+              <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 This approach reduces ambiguity during monitoring and crisis moments, allowing backup administrators to quickly understand what&rsquo;s happening, why it matters, and when action is required.
               </p>
             </div>
           </Reveal>
           {/* Master-Detail View section */}
+        </div>
+      </section>
+
+      <VerticalDivider />
+
+      <section className="pb-8 md:pb-12 px-6 md:px-12 lg:px-16">
+        <div className="max-w-[1400px] mx-auto space-y-4">
           <Reveal delay={0.38}>
             <div className="max-w-4xl mx-auto mt-8 mb-6">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 leading-snug" style={{ color: 'var(--text-primary)' }}>
@@ -556,7 +656,9 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             </div>
           </Reveal>
           <Reveal delay={0.4}>
-            <img src={imgImage178} alt="Master-detail view - Data Protection overview with topology and side panel" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            <div className="max-w-4xl mx-auto">
+              <img src={imgImage178} alt="Master-detail view - Data Protection overview with topology and side panel" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+            </div>
           </Reveal>
           <Reveal delay={0.42}>
             <div className="max-w-4xl mx-auto my-8">
@@ -580,56 +682,6 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
                   </div>
                 ))}
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <VerticalDivider />
-
-      {/* ═══════════════════════════════════════════════════════
-          DESIGN PRINCIPLES - From ideation insights
-          ═══════════════════════════════════════════════════════ */}
-      <section className="pb-14 md:pb-18 px-6 md:px-12 lg:px-16">
-        <div className="max-w-3xl mx-auto">
-          <Reveal>
-            <p className="text-[11px] uppercase tracking-[0.3em] mb-8 text-center" style={{ color: 'var(--text-tertiary)' }}>Design Principles</p>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="text-sm md:text-base font-light text-center mb-8" style={{ color: 'var(--text-secondary)' }}>
-              From ideation insights:
-            </p>
-          </Reveal>
-
-          <div className="flex flex-col gap-0">
-            {[
-              { icon: <Eye className="w-4 h-4" strokeWidth={1.4} />, text: 'Show only what\u2019s needed, when needed' },
-              { icon: <Zap className="w-4 h-4" strokeWidth={1.4} />, text: 'Automate the minimum required decisions' },
-              { icon: <MonitorCheck className="w-4 h-4" strokeWidth={1.4} />, text: 'Speak the administrator\u2019s language' },
-              { icon: <Lightbulb className="w-4 h-4" strokeWidth={1.4} />, text: 'Guide, but let users decide' },
-              { icon: <Shield className="w-4 h-4" strokeWidth={1.4} />, text: 'Keep systems optimistic \u2014 not alarming' },
-            ].map((item, i, arr) => (
-              <Reveal key={i} delay={0.15 + i * 0.06}>
-                <div
-                  className="flex items-center gap-4 py-4"
-                  style={{ borderBottom: i < arr.length - 1 ? '1px solid var(--border-subtle)' : undefined }}
-                >
-                  <div style={{ color: 'var(--text-tertiary)' }}>{item.icon}</div>
-                  <p className="text-sm md:text-base font-light" style={{ color: 'var(--text-primary)' }}>{item.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.5}>
-            <div className="mt-10 text-center">
-              <p className="text-sm md:text-base font-light mb-2" style={{ color: 'var(--text-secondary)' }}>
-                The goal was not visual simplification.
-              </p>
-              <p className="text-base md:text-lg font-normal italic" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>
-                It was cognitive simplification.
-              </p>
             </div>
           </Reveal>
         </div>
@@ -668,16 +720,6 @@ export default function CaseStudyXreamioContent({ onNextStudy }: { onNextStudy?:
             ))}
           </div>
 
-          <Reveal delay={0.5}>
-            <div className="pl-8 md:pl-12 max-w-2xl mx-auto" style={{ borderLeft: '3px solid var(--text-primary)' }}>
-              <p className="text-sm font-light mb-1" style={{ color: 'var(--text-secondary)' }}>
-                Monitoring became clearer under pressure.
-              </p>
-              <p className="text-base md:text-lg font-normal italic leading-relaxed" style={{ fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>
-                And in enterprise systems, clarity is control.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
