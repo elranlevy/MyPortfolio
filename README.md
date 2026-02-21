@@ -5,6 +5,11 @@
 
   **Repository:** https://github.com/elranlevy/MyPortfolio.git
 
+  ### Push without typing credentials (one-time SSH setup)
+
+  Run once: `./scripts/setup-github-ssh.sh`  
+  It creates an SSH key and switches the repo to SSH. Add the printed key at [GitHub SSH keys](https://github.com/settings/ssh/new). After that, `git push` and `git pull` work without asking for credentials.
+
   ## Running the code
 
   Run `npm i` to install the dependencies.
