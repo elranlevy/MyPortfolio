@@ -416,9 +416,14 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
                   { label: 'Complete Upgrade', pct: 9.4, count: '2,329', height: '9.4%' },
                 ].map((step, i) => (
                   <div key={i} className="flex-1 flex flex-col items-center">
-                    <div className="w-full flex flex-col items-center mb-1.5">
-                      <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded mb-0.5" style={{ color: '#7C5CFC' }}>{step.pct}%</span>
+                    <div className="w-full flex flex-col items-center mb-1" style={{ height: '52px', justifyContent: 'flex-end' }}>
+                      <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded" style={{ color: '#7C5CFC' }}>{step.pct}%</span>
                       <span className="text-[9px] font-light" style={{ color: 'var(--text-tertiary)' }}>{step.count}</span>
+                      {step.drop ? (
+                        <span className="text-[9px] font-bold px-1.5 py-0.5 rounded mt-0.5" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)', color: '#dc2626' }}>▼ 76% drop</span>
+                      ) : (
+                        <span className="text-[9px] px-1.5 py-0.5 mt-0.5 invisible">placeholder</span>
+                      )}
                     </div>
                     <div className="w-full relative" style={{ height: '140px' }}>
                       <div
@@ -429,11 +434,6 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
                           opacity: step.drop ? 0.55 : 1,
                         }}
                       />
-                      {step.drop && (
-                        <div className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                          <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)', color: '#dc2626' }}>▼ 76% drop</span>
-                        </div>
-                      )}
                     </div>
                     <p className="text-[9px] md:text-[10px] text-center mt-2 font-medium leading-tight" style={{ color: 'var(--text-primary)' }}>{step.label}</p>
                   </div>
