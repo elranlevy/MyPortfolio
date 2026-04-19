@@ -46,6 +46,7 @@ import imgPromotedMatch1 from '@/assets/monday-promoted-match-1.png';
 import imgPromotedMatch2 from '@/assets/monday-promoted-match-2.png';
 import whyStandardVideo from '@/assets/why-standard-video.mp4';
 import whyProVideo from '@/assets/why-pro-video.mp4';
+import imgPricingTable from '@/assets/monday-pricing-table.png';
 
 /* ── Scroll-triggered reveal ─────────────────────────────────── */
 function Reveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
@@ -366,6 +367,104 @@ export default function CaseStudyMondayContent({ onNextStudy }: { onNextStudy?: 
           </Reveal>
         </div>
       </section>
+
+      <Reveal>
+        <div className="max-w-6xl mx-auto px-6 md:px-12 mt-12">
+          <img src={imgPricingTable} alt="monday.com plan selection pricing table" className="w-full h-auto rounded-xl" loading="lazy" decoding="async" />
+        </div>
+      </Reveal>
+
+      <VerticalDivider />
+
+      {/* Mixpanel-style funnel illustration */}
+      <Reveal>
+        <div className="max-w-4xl mx-auto px-6 md:px-12 mb-12">
+          <div className="rounded-xl overflow-hidden" style={{ border: '1px solid var(--border-subtle)', backgroundColor: 'var(--surface-primary)' }}>
+            {/* Toolbar */}
+            <div className="flex items-center justify-between px-5 py-3" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+              <div className="flex items-center gap-2">
+                {['Custom', 'Today', 'Yesterday', '7D'].map((t) => (
+                  <span key={t} className="px-2.5 py-1 rounded text-[10px] font-light" style={{ color: 'var(--text-tertiary)' }}>{t}</span>
+                ))}
+                <span className="px-2.5 py-1 rounded text-[10px] font-semibold" style={{ backgroundColor: 'var(--surface-secondary)', color: 'var(--text-primary)' }}>30D</span>
+                {['3M', '6M', '12M'].map((t) => (
+                  <span key={t} className="px-2.5 py-1 rounded text-[10px] font-light" style={{ color: 'var(--text-tertiary)' }}>{t}</span>
+                ))}
+                <span className="ml-2 text-[10px] font-medium" style={{ color: 'var(--text-primary)' }}>Compare to Past</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#7C5CFC' }}><path d="M2 12h3l7-7-3-3-7 7v3z" /><path d="M10 4l3 3" /></svg>
+                <span className="text-[10px] font-medium" style={{ color: 'var(--text-primary)' }}>Funnel Steps</span>
+              </div>
+            </div>
+
+            {/* Chart area */}
+            <div className="flex items-end px-5 pt-6 pb-4 gap-4 md:gap-6">
+              {/* Left stat */}
+              <div className="flex-shrink-0 w-24 md:w-28 pb-8">
+                <p className="text-[9px] uppercase tracking-wider font-medium mb-1" style={{ color: 'var(--text-tertiary)' }}>Overall Conversion</p>
+                <p className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>9.37%</p>
+                <p className="text-[9px] font-light leading-tight mt-1" style={{ color: 'var(--text-tertiary)' }}>Uniques in Specific Order, who converted within 10 minutes.</p>
+              </div>
+
+              {/* Bars */}
+              <div className="flex-1 flex items-end gap-3 md:gap-5">
+                {[
+                  { label: 'Start Trial', pct: 100, count: '24,863', height: '100%' },
+                  { label: 'View Plan Selection', pct: 78, count: '19,410', height: '78%' },
+                  { label: 'Choose a Plan', pct: 19, count: '4,658', height: '19%', drop: true },
+                  { label: 'Complete Upgrade', pct: 9.4, count: '2,329', height: '9.4%' },
+                ].map((step, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-center">
+                    <div className="w-full flex flex-col items-center mb-1.5">
+                      <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded mb-0.5" style={{ color: '#7C5CFC' }}>{step.pct}%</span>
+                      <span className="text-[9px] font-light" style={{ color: 'var(--text-tertiary)' }}>{step.count}</span>
+                    </div>
+                    <div className="w-full relative" style={{ height: '140px' }}>
+                      <div
+                        className="absolute bottom-0 left-0 right-0 rounded-t-sm"
+                        style={{
+                          height: step.height,
+                          backgroundColor: step.drop ? '#7C5CFC' : 'rgba(124, 92, 252, 0.75)',
+                          opacity: step.drop ? 0.55 : 1,
+                        }}
+                      />
+                      {step.drop && (
+                        <div className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                          <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)', color: '#dc2626' }}>▼ 76% drop</span>
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-[9px] md:text-[10px] text-center mt-2 font-medium leading-tight" style={{ color: 'var(--text-primary)' }}>{step.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom table row */}
+            <div className="px-5 py-3" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+              <div className="flex items-center gap-4 md:gap-6">
+                <div className="flex-shrink-0 w-24 md:w-28">
+                  <p className="text-[9px] font-semibold" style={{ color: 'var(--text-primary)' }}>Property</p>
+                </div>
+                <div className="flex-1 grid grid-cols-4 gap-3 md:gap-5">
+                  {[
+                    { total: '9.37%', count: '24,863' },
+                    { total: '352s', count: '19,410' },
+                    { total: '76%', count: '4,658', highlight: true },
+                    { total: '182s', count: '2,329' },
+                  ].map((cell, i) => (
+                    <div key={i} className="text-center">
+                      <p className={`text-[9px] font-medium ${cell.highlight ? '' : ''}`} style={{ color: cell.highlight ? '#dc2626' : 'var(--text-primary)' }}>{cell.total}</p>
+                      <p className="text-[8px] font-light" style={{ color: 'var(--text-tertiary)' }}>{cell.count}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Reveal>
 
       <VerticalDivider />
 
